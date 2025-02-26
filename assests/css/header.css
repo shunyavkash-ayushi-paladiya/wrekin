@@ -1,0 +1,253 @@
+.header{
+    background-color: var(--primary);
+    position: fixed;
+    width: 100%;
+    z-index: 999;    
+    top: 0;
+    left: 0;
+
+}
+
+.header-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 31px;
+}
+
+.menu-icon{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-text{
+    font-size: 18px;
+    letter-spacing: -0.36px;
+    line-height: 26px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--secondary);
+}   
+
+.menu-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.menu-content {
+    display: flex;
+    width: 100%;
+}
+
+.menulist-a{
+    font-size: 68px;
+    line-height: 82px;
+    font-weight: 600;
+    color: var(--secondary);
+    text-transform: titlecase;
+    white-space: nowrap;
+}
+
+.serch-icon-img img{
+    width: 19px;
+    height: 19px;
+}
+
+.logo-img img{
+    width: 257px;
+    height: 54px;
+}
+
+.menu-icon img{
+    width: 30px;
+    height: 23px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icons ul{
+   display: flex;
+   flex-direction: column;
+   align-items: baseline;
+   gap: 10px;
+}
+
+.social-icons-img img{
+    width: 257px;
+    height: 54px;
+}
+
+.social-icons-img{
+    background-color: rgba(255, 255, 255, 0.301);
+    border-radius: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons{
+    margin-top: 25px;
+}
+
+.menu-wrapper {
+    display: flex;
+    border-right: 1px solid var(--secondary);
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    max-height: 500px; 
+}
+
+.menu-icon{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-text{
+    font-size: 18px;
+    letter-spacing: -0.36px;
+    line-height: 26px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--secondary);
+}   
+
+.menu-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--seventh);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 999;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.useful-info{
+   display: flex;
+   align-items: center;
+   gap: 50px;
+   justify-content: center;
+   padding-left: 35px;
+}
+
+.useful-info-left-section{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.useful-info-left-section h5{
+    opacity: 30%;
+    color: var(--secondary);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2.1px;
+    line-height: 17px;
+    z-index: -1;
+    white-space: nowrap;
+}
+
+.useful-info-li{
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+}
+
+.social-icons ul{
+   display: flex;
+   flex-direction: column;
+   align-items: baseline;
+   gap: 10px;
+}
+
+.social-icons-img img{
+    width: 27px;
+    height: 26px;
+}
+
+.social-icons-img{
+    background-color: rgba(255, 255, 255, 0.301);
+    border-radius: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons{
+    margin-top: 25px;
+}
+
+.menulist-a.active {
+    border-left: 3px solid var(--forth); 
+    padding-left: 10px;
+}
+
+.submenu-list {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.submenu-list.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-btn{
+    display: none;
+    position: absolute;
+    top: 37px;
+    left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+}

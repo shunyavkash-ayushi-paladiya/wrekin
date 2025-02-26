@@ -1,0 +1,43 @@
+@import url(../css/fonts.css);
+@import url(../css/header.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary:#002A4D;
+    --secondary:#FFFFFF;
+    --ternory:#FC9094;
+    --forth:#A5CEC0;
+    --fifth:#1170A8;
+    --sixth:#58132F;
+    --seventh:#4B4F61;
+    -eaight:#7A2534;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Archia';
+    scroll-behavior: smooth;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: currentColor;
+    display: inline-block;
+}
+
+ul{
+    list-style: none;
+}
+
+.container {
+    max-width: 1220px;
+    margin:0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
