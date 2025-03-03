@@ -172,6 +172,7 @@
     }
     .center-footer-center ul{
         align-items: baseline;
+        grid-template-columns: repeat(2,1fr);
     }
     .submit-btn {
         padding: 15px 26px;
@@ -356,6 +357,16 @@
     }
     .submit-btn {
         left: 86%;
+    }
+    .swiper_card_inner {
+        margin-top: -83px;
+        padding-top: 135px;
+    }
+    .bottom-footer-top{
+        display: none;
+    }
+    .social-icons{
+        padding-bottom: 50px;
     }
  }
 
