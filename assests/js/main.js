@@ -143,3 +143,105 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+var swiper = new Swiper('.mySwipers', {
+    slidesPerView: 4,
+    spaceBetween: 30, 
+    // centeredSlides: true, 
+    // loop: true, 
+    pagination: {
+        // el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swipers_arrow_a:nth-child(2)',  
+        prevEl: '.swipers_arrow_a:nth-child(1)', 
+    },
+    breakpoints: {
+        320: { 
+            slidesPerView: 1,
+        },
+        375: { 
+            slidesPerView: 1.5,
+        },
+        425: { 
+            slidesPerView: 1.5,
+        },
+        575: { 
+            slidesPerView: 2,
+        },
+        768: { 
+            slidesPerView: 2.5,
+        },
+        1024: { 
+            slidesPerView: 3,
+        },
+        1200: { 
+            slidesPerView: 3.5,
+        }
+    },
+    on: {
+        slideChange: function () {
+            updateArrowState(swiper);
+        }
+    }
+});
+
+
+function updateArrowState(swiper) {
+    const prevArrow = document.querySelector('.swipers_arrow_a:nth-child(1)');
+    const nextArrow = document.querySelector('.swipers_arrow_a:nth-child(2)');
+
+    
+    if (swiper.isBeginning) {
+        prevArrow.classList.add('disabled');
+    } else {
+        prevArrow.classList.remove('disabled');
+    }
+
+    
+    if (swiper.isEnd) {
+        nextArrow.classList.add('disabled');
+    } else {
+        nextArrow.classList.remove('disabled');
+    }
+}
+
+
+var swiper = new Swiper(".mySwiper", {
+    pagination: {
+    //   el: ".swiper-pagination",
+    //   dynamicBullets: true,
+    loop: true, 
+    },
+    slidesPerView: 2.5,
+    spaceBetween: 30, 
+    autoplay:{
+    delay:2000,
+    },
+    breakpoints: {
+        320: { 
+            slidesPerView: 1,
+        },
+        375: { 
+            slidesPerView: 1,
+        },
+        425: { 
+            slidesPerView: 1,
+        },
+        575: { 
+            slidesPerView: 1,
+        },
+        768: { 
+            slidesPerView: 2.5,
+        },
+        1024: { 
+            slidesPerView: 2.5,
+        },
+        1200: { 
+            slidesPerView: 2.5,
+        }
+    },
+  });
+  
