@@ -38,6 +38,12 @@
     .slider-section{
         padding-bottom: 147px;
     }
+    .pageslider-link{
+        display: none;
+    }
+    .howto{
+      margin-top: -300px;
+    }
 }
 
 @media screen and (max-width:991px){
@@ -181,6 +187,13 @@
     #email-input{
         max-width: 100%;
     }
+    .admission-card-inner{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    .welcome-inner{
+        padding-top: 50px;
+    }
 }
 
 @media screen and (max-width:610px){
@@ -265,7 +278,7 @@
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
-          overflow: hidden;
+        overflow: hidden;
     }
     .background-fixed-para{
         font-size: 43px;
@@ -367,6 +380,100 @@
     }
     .social-icons{
         padding-bottom: 50px;
+    }
+    .admission-card-inner{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .admission-head{
+        font-size: 51px;
+        letter-spacing: -1.02px;
+    }
+    .admission-text{
+        margin-top: 10px;
+        font-size: 21px;
+        font-weight: 100;
+        letter-spacing: -0.42px;
+        line-height: 37px;
+    }
+    .admission-heading{
+        top: 20%;
+        transform: translateY(-20%);
+        letter-spacing:-0.8px ;
+        line-height: 80px;
+        font-size:40px ;
+    }
+    .welcome-right-para{
+        display: none;
+    }
+    .welcome-left-para{
+        color: var(--primary);
+        font-size: 15px;
+        max-width: 301px;
+        -webkit-line-clamp: 7;
+    }
+    .welcome-heading{
+        font-size: 48px;
+        letter-spacing: -0.96px;
+        line-height: 60px;
+    }
+    .welcome{
+        transform: translateY(-110%);
+    }
+    .howto-inner{
+        flex-direction: column;
+    }
+    .help-texts{
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .help-text{
+        max-width: 250px;
+        font-size: 40px;
+        letter-spacing: -0.8px;
+        line-height: 40px;
+    }
+    .money-right-para{
+        display: none;
+    }
+    .money-left-p{
+        max-width: 300px;
+    }
+    .money-head{
+        color: var(--forth);
+        letter-spacing: -1.1px;
+        line-height: 60px;
+    }
+    .help-inner {
+        padding: 40px;
+    }
+    .transport-inner{
+        flex-direction: column;
+        gap: 100px;
+    }
+    .trasport-anchor{
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .boarding-inner{
+        gap: 100px;
+        flex-direction: column;
+    }
+    .boardings-para{
+        display: none;
+    }
+    .dresscode-details{
+       display: flex;
+       overflow: auto;
+    }
+    .dresscode-detail{
+        flex-direction: column;
+        flex-shrink: 0;
+    }
+    .dresscode-a{
+        width: 56px;
+    }
+    .boarding-left-img::before {
+        right: -7%;
     }
  }
 

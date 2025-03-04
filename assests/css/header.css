@@ -8,6 +8,14 @@
 
 }
 
+.headers{
+    background-color: var(--secondary);
+}
+
+.headerr{
+    background-color: transparent;
+}
+
 .header-inner{
     display: flex;
     align-items: center;
@@ -125,7 +133,11 @@
     font-weight: 600;
     text-transform: capitalize;
     color: var(--secondary);
-}   
+}  
+
+.menu-texts{
+    color: var(--primary);
+}
 
 .menu-icon {
     display: flex;

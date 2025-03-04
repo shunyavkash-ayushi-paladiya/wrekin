@@ -214,6 +214,7 @@ var swiper = new Swiper(".mySwiper", {
     //   el: ".swiper-pagination",
     //   dynamicBullets: true,
     loop: true, 
+    centeredSlides: true,
     },
     slidesPerView: 2.5,
     spaceBetween: 30, 
@@ -245,3 +246,17 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
   
+
+  var swiper = new Swiper(".mySwiper_s", {
+    slidesPerView: 8,
+    // spaceBetween: 20,
+    freeMode: true,
+    loop:true,
+    autoplay:{
+        delay:500,
+        },
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+  });
