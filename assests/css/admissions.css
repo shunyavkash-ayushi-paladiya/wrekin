@@ -32,6 +32,7 @@
 
 .welcome-inner{
     padding-top: 100px;
+    padding-bottom: 50px;
 }
 
 .welcome-heading{
@@ -221,9 +222,13 @@
 
 /* slider section */
 
-  .pageslider-link{
-    transform: translateY(-580px);
-   } 
+   .pageslider-link{
+    position: fixed;
+    width: 100%;
+    z-index: 999;    
+    bottom: 5%;
+    left: 0;
+   }
 
   .swiper {
     width: 100%;
@@ -534,4 +539,48 @@
     background-color: var(--forth);
     border-radius: 15px;
     margin-top: 50px;
+}
+
+/* recently graduated section */
+
+.recently-graduated{
+    background-color: var(--fifth);
+    position: relative;
+}
+
+.recently-graduated-inner{
+    padding-block: 176px;
+}
+
+.recently-graduated::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url("../images/section/Subtraction\ 10.svg");
+    width: 100%;
+    height: 100%;
+    max-width: 460px;
+    min-height: 798px;
+    background-repeat: no-repeat;
+    object-fit: contain;
+}
+
+.recently-graduated-head{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 60px;
+    max-width: 585px;
+    color: var(--secondary);
+}
+
+.recently-graduated-img img{
+   width: 100%;
+   height: 100%;
+}
+
+.recently-graduated-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
