@@ -260,3 +260,32 @@ var swiper = new Swiper(".mySwiper", {
     //   clickable: true,
     // },
   });
+
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".academic-left-a");
+
+    links.forEach(link => {
+        link.addEventListener("click", function (e) {
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetId && targetSection) {
+                e.preventDefault();
+
+                targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+
+                document.querySelectorAll(".academic-right-section > div").forEach(section => {
+                    section.classList.remove("active-section");
+                });
+
+                document.querySelectorAll(".academic-left-a").forEach(anchor => {
+                    anchor.classList.remove("active-link");
+                });
+
+                targetSection.classList.add("active-section");
+                this.classList.add("active-link");
+            }
+        });
+    });
+});

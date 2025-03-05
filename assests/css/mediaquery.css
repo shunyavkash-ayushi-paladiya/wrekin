@@ -1,8 +1,35 @@
+@media screen and (max-width:1440px){
+    .boarding-left-img::before {
+        right: -6%;
+        top: 6%;
+    }
+    .aboutus-right-section::before{
+        right: -6%;
+        top: 6%;
+    }
+    .character-right-section::before{
+        right: -6%;
+        top: 6%;
+    }
+}
 @media screen and (max-width:1330px){
     .hero-section-left{
         display: none;
     } 
+    .boarding-left-img::before {
+        right: -4%;
+        top: 4%;
+    }
+    .aboutus-right-section::before{
+        right: -4%;
+        top: 4%;
+    }
+    .character-right-section::before{
+        right: -4%;
+        top: 4%;
+    }
 }
+
 
 @media screen and (max-width:1024px){
     .menu-content{
@@ -43,6 +70,21 @@
     }
     .howto{
       margin-top: -300px;
+    }
+    .boarding-left-img::before {
+        right: -4%;
+        top: 4%;
+    }
+    .aboutus-right-section::before{
+        right: -4%;
+        top: 4%;
+    }
+    .character-right-section::before{
+        right: -4%;
+        top: 4%;
+    }
+    .request-text {
+        font-size: 55px;
     }
 }
 
@@ -194,11 +236,50 @@
     .welcome-inner{
         padding-top: 50px;
     }
+    .boarding-left-img::before {
+        right: -6%;
+        top: 6%;
+    }
+    .aboutus-right-section::before{
+        right: -6%;
+        top: 6%;
+    }
+    .character-right-section::before
+    .request-inner:before{
+        clip-path: polygon(0 0, 100% 0, 100% 64%, 0 65%);
+        width: 100%;
+        border-top-right-radius: 25px;
+    }
+    .admission-headings span{
+        display: none;
+    }
+    .column-right-text{
+        font-size: 45px;
+        line-height: 78px;
+        letter-spacing: -0.9px;
+    }
+    .column-left-text{
+        font-size: 45px;
+        line-height: 78px;
+        letter-spacing: -0.9px;
+    }
 }
 
 @media screen and (max-width:610px){
     .sixth-form-inner{
         flex-direction: column;
+    }
+    .boarding-left-img::before {
+        right: -4%;
+        top: 4%;
+    }
+    .aboutus-right-section::before{
+        right: -4%;
+        top: 4%;
+    }
+    .character-right-section::before
+    .admission-headings{
+        font-size: 84px;
     }
 }
 
@@ -402,6 +483,17 @@
         line-height: 80px;
         font-size:40px ;
     }
+    .admission-headings{
+        top: 20%;
+        transform: translateY(-20%);
+        letter-spacing:-0.8px ;
+        line-height: 80px;
+        font-size:40px ;
+    }
+    .welcomes-para{
+        display: none;
+    }
+
     .welcome-right-para{
         display: none;
     }
@@ -458,6 +550,10 @@
         gap: 100px;
         flex-direction: column;
     }
+    .aboutus-inner{
+        gap: 100px;
+        flex-direction: column-reverse;
+    }
     .boardings-para{
         display: none;
     }
@@ -468,12 +564,107 @@
     .dresscode-detail{
         flex-direction: column;
         flex-shrink: 0;
+        align-items: center;
     }
     .dresscode-a{
         width: 56px;
     }
-    .boarding-left-img::before {
-        right: -7%;
+    .recently-graduated-inner{
+        flex-direction: column-reverse;
+    }
+    .recently-graduated-img{
+        position: relative;
+        z-index: 0;
+    }
+    .recently-graduated-head{
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 40px;
+        max-width: 585px;
+        color: var(--secondary);
+    }
+    .dresscode-paras{
+        max-width: 240px;
+        line-height: 24px;
+    }
+    .dresscode-para{
+        text-align: center;
+    }
+    .request-text{
+        max-width: 235px;
+        line-height: 47px;
+        letter-spacing: -0.88px;
+        font-size: 44px;
+    }
+    .request-content{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .want-head{
+        max-width: 260px;
+        font-size: 45px;
+        letter-spacing: -0.9px;
+        line-height: 43px;
+        text-align: center;
+    }
+    .want-para{
+       font-size: 15px;
+       max-width: 300px;
+       display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        line-height: 28px;
+    }
+    .admission-entry-inner{
+        flex-direction: column;
+    }
+    .admission-entry-para{
+        font-size: 40px;
+        line-height: 36px;
+        letter-spacing: -0.8px;
+        max-width: 300px;
+        text-align: center;
+    }
+    .welcomes {
+        transform: translateY(-99%);
+    }
+    .column-inner{
+        flex-direction: column;
+    }
+    .exchange-text{
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .exchange-texts-para{
+        display: inline;
+    }
+    .exchange-text-para{
+        display: none;
+    }
+    .exchange-inner {
+        padding: 40px;
+    }
+    .employability-inner{
+        flex-direction: column;
+    }
+    .employability-right-text{
+        font-size: 42px;
+        letter-spacing: -0.84px;
+        line-height: 50px;
+        max-width: 285px;
+    }
+    .character-inner{
+        flex-direction: column-reverse;
+    }
+    .international-inner{
+        flex-direction: column;
+    }
+    .international-right-text{
+        font-size: 42px;
+        letter-spacing: -0.84px;
+        line-height: 50px;
     }
  }
 
@@ -493,5 +684,17 @@
  @media screen and (max-width: 320px) {
     .submit-btn {
         left: 78%;
+    }
+    .boarding-left-img::before {
+        right: -7%;
+        top: 7%;
+    }
+    .aboutus-right-section::before{
+        right: -7%;
+        top: 7%;
+    }
+    .character-right-section::before{
+        right: -7%;
+        top: 7%;
     }
 }

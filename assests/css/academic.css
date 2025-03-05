@@ -1,0 +1,90 @@
+.academic-left-section{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary);
+    padding: 30px;
+    max-height: 570px;
+    width: 100%;
+    position: sticky;
+    top: 150px;
+    max-width: 300px;
+    box-shadow: 0px 3px 36px #00000017;
+    border-radius: 15px;
+    align-items: baseline;
+}
+
+.academic-inner{
+    margin-top: 150px;
+}
+
+.academic-left-a{
+    color: var(--forth);
+    font-size: 14px;
+    letter-spacing: -0.14px;
+    line-height: 34px;
+}
+
+.academic-left-anchor{
+    color: var(--secondary);
+    font-size: 14px;
+    line-height: 24px;
+    padding: 20px 40px;
+    background-color: var(--forth);
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.academic-inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabs_content{
+    scroll-margin-top: 400px;
+}
+
+.edi-text{
+    font-size: 50px;
+    letter-spacing: -1px;
+    line-height: 70px;
+    color: var(--primary);
+}
+
+.edi-para{
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--primary);
+    max-width: 840px;
+}
+
+.edi-sec-para{
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--primary);
+    max-width: 840px;
+    margin-top: 5px;
+}
+
+.academic{
+    margin-top: 50px;
+}
+
+.academic-text{
+    font-size: 50px;
+    letter-spacing: -1px;
+    line-height: 70px;
+    color: var(--primary);
+}
+
+.academic-left-a.active-link {
+    border-left: 3px solid var(--primary);
+    padding-left: 10px; 
+}
+
+.academic-para{
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--primary);
+    max-width: 840px;
+    margin-top: 5px;
+}

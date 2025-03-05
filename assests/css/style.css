@@ -1,7 +1,3 @@
-@import url(../css/fonts.css);
-@import url(../css/header.css);
-@import url(../css/admissionages.css);
-@import url(../css/admissions.css);
 
 * {
     margin: 0;
@@ -259,6 +255,14 @@ ul {
     background-color: var(--forth);
     border-radius: 10px;
     margin-top: 25px;
+    border:2px solid var(--forth);
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.image-card-section-a:hover{
+    background-color: transparent;
+    color: var(--forth);
 }
 
 .image-card-section-text{
@@ -371,6 +375,15 @@ ul {
     padding: 20px 41px 20px 41px;
     border-radius: 10px;
     white-space: nowrap;
+    border: 2px solid var(--primary);
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.background-fixed-a:hover{
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
 }
 
 .background-fixed-inner{
@@ -429,6 +442,15 @@ ul {
     padding: 20px 40px;
     border-radius: 10px;
     margin-top: 12px;
+    border: 2px solid var(--primary);
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.sixth-left-section-a:hover{
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
 }
 
 .sixth-left-section-two{
@@ -448,6 +470,15 @@ ul {
     padding: 20px 40px;
     border-radius: 10px;
     margin-top: 12px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--forth);
+    font-weight: 600;
+}
+
+.sixth-left-section-anchor:hover{
+    border: 2px solid var(--forth);
+    background-color: transparent;
+    color: var(--forth);
 }
 
 .sixth-right-section{
@@ -471,6 +502,15 @@ ul {
     padding: 20px 40px;
     border-radius: 10px;
     margin-top: 20px;
+    border: 2px solid var(--primary);
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.sixth-right-section-anchor:hover{
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
 }
 
 .sixth-right-section-two{
@@ -709,6 +749,15 @@ section.slidetype {
     background-color: var(--primary);
     color: var(--secondary);
     border-radius: 10px;
+    border: 2px solid var(--primary);
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.joinus-a:hover{
+    border: 2px solid var(--primary);
+    background-color: transparent;
+    color: var(--primary);
 }
 
 /* visit section  */
@@ -758,6 +807,16 @@ section.slidetype {
     padding: 20px 40px;
     border-radius: 15px;
     white-space: nowrap;
+    border: 2px solid var(--ternory);
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 600;
+}
+
+.visit-a:hover{
+    border: 2px solid var(--ternory);
+    background-color: transparent;
+    color: var(--ternory);
 }
 
 /* footer section  */
