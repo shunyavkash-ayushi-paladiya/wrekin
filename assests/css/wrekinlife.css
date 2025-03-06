@@ -516,7 +516,7 @@
 
  /* art section  */
 
- /* .art{
+ .art{
     background-color: #F0F4F3;
  }
 
@@ -528,8 +528,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -537,8 +536,12 @@
  }
 
  .art-head{
-    font-size: 80px;
+    font-size: 60px;
     color: var(--secondary);
+    font-weight: 600;
+    line-height: 70px;
+    letter-spacing: -1.6px;
+    white-space: nowrap;
  }
 
  .art-left-img img{
@@ -562,6 +565,8 @@
     text-align: center;
     border: 2px solid var(--forth);
     font-weight: 600;
+    margin-top: 10px;
+    white-space: nowrap;
  }
 
  .art-a:hover{
@@ -583,10 +588,9 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
- } */
+ }

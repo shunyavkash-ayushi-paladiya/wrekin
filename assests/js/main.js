@@ -262,30 +262,121 @@ var swiper = new Swiper(".mySwiper", {
   });
 
   
+
   document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll(".academic-left-a");
+    const links = document.querySelectorAll(".sticky_left_anchor");
 
     links.forEach(link => {
         link.addEventListener("click", function (e) {
+            e.preventDefault();
+
             const targetId = this.getAttribute("href").substring(1);
             const targetSection = document.getElementById(targetId);
 
-            if (targetId && targetSection) {
-                e.preventDefault();
-
+            if (targetSection) {
                 targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
 
-                document.querySelectorAll(".academic-right-section > div").forEach(section => {
-                    section.classList.remove("active-section");
-                });
-
-                document.querySelectorAll(".academic-left-a").forEach(anchor => {
+                document.querySelectorAll(".sticky_left_anchor").forEach(anchor => {
                     anchor.classList.remove("active-link");
                 });
 
-                targetSection.classList.add("active-section");
                 this.classList.add("active-link");
             }
         });
     });
 });
+
+
+var swiper = new Swiper('.my_Swipers', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swipers-academic-arrow-a.next',
+        prevEl: '.swipers-academic-arrow-a.prev',
+    },
+    on: {
+        slideChange: function () {
+            updateArrowState(swiper);
+        }
+    }
+});
+
+function updateArrowState(swiper) {
+    document.querySelector('.prev').classList.toggle('disabled', swiper.isBeginning);
+    document.querySelector('.next').classList.toggle('disabled', swiper.isEnd);
+}
+
+updateArrowState(swiper);
+
+
+const accItems = document.querySelectorAll(".accordion__item");
+accItems.forEach(item => {
+    item.addEventListener("click", function () {
+        accItems.forEach(i => i !== item && i.classList.remove("accordion__item--active"));
+        item.classList.toggle("accordion__item--active");
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    var swiper = new Swiper('.mySwiperss', {
+        slidesPerView: 2.3,
+        spaceBetween: 10,
+        breakpoints: {
+            320: { 
+                slidesPerView: 1.3,
+            },
+            375: { 
+                slidesPerView: 1.3,
+            },
+            425: { 
+                slidesPerView: 1.5,
+            },
+            575: { 
+                slidesPerView: 1.5,
+            },
+            768: { 
+                slidesPerView: 2.3,
+            },
+            1024: { 
+                slidesPerView: 2.3,
+            },
+            1200: { 
+                slidesPerView: 2.3,
+            }
+        },
+        navigation: {
+            nextEl: '.department-arrow-a.next',
+            prevEl: '.department-arrow-a.prev',
+        },
+        on: {
+            init: function () {
+                updateArrowState(this);
+            },
+            slideChange: function () {
+                updateArrowState(this);
+            }
+        }
+    });
+
+    function updateArrowState(swiper) {
+        let prevArrow = document.querySelector('.department-arrow-a.prev');
+        let nextArrow = document.querySelector('.department-arrow-a.next');
+
+        if (swiper.isBeginning) {
+            prevArrow.classList.add('disabled');
+        } else {
+            prevArrow.classList.remove('disabled');
+        }
+
+        if (swiper.isEnd) {
+            nextArrow.classList.add('disabled');
+        } else {
+            nextArrow.classList.remove('disabled');
+        }
+    }
+});
+
