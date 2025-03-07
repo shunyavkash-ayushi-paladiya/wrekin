@@ -144,71 +144,74 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-var swiper = new Swiper('.mySwipers', {
-    slidesPerView: 4,
-    spaceBetween: 30, 
-    // centeredSlides: true, 
-    // loop: true, 
-    pagination: {
-        // el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swipers_arrow_a:nth-child(2)',  
-        prevEl: '.swipers_arrow_a:nth-child(1)', 
-    },
-    breakpoints: {
-        320: { 
-            slidesPerView: 1,
+let mySwipers = document.querySelectorAll(".mySwipers");
+if(mySwipers.length){
+    var swiper = new Swiper('.mySwipers', {
+        slidesPerView: 4,
+        spaceBetween: 30, 
+        // centeredSlides: true, 
+        // loop: true, 
+        pagination: {
+            // el: '.swiper-pagination',
+            // clickable: true,
         },
-        375: { 
-            slidesPerView: 1.5,
+        navigation: {
+            nextEl: '.swipers_arrow_a:nth-child(2)',  
+            prevEl: '.swipers_arrow_a:nth-child(1)', 
         },
-        425: { 
-            slidesPerView: 1.5,
+        breakpoints: {
+            320: { 
+                slidesPerView: 1,
+            },
+            375: { 
+                slidesPerView: 1.5,
+            },
+            425: { 
+                slidesPerView: 1.5,
+            },
+            575: { 
+                slidesPerView: 2,
+            },
+            768: { 
+                slidesPerView: 2.5,
+            },
+            1024: { 
+                slidesPerView: 3,
+            },
+            1200: { 
+                slidesPerView: 3.5,
+            }
         },
-        575: { 
-            slidesPerView: 2,
-        },
-        768: { 
-            slidesPerView: 2.5,
-        },
-        1024: { 
-            slidesPerView: 3,
-        },
-        1200: { 
-            slidesPerView: 3.5,
+        on: {
+            slideChange: function () {
+                updateArrowState(swiper);
+            }
         }
-    },
-    on: {
-        slideChange: function () {
-            updateArrowState(swiper);
+    });
+    
+    
+    function updateArrowState(swiper) {
+        const prevArrow = document.querySelector('.swipers_arrow_a:nth-child(1)');
+        const nextArrow = document.querySelector('.swipers_arrow_a:nth-child(2)');
+    
+        
+        if (swiper.isBeginning) {
+            prevArrow.classList.add('disabled');
+        } else {
+            prevArrow.classList.remove('disabled');
         }
-    }
-});
-
-
-function updateArrowState(swiper) {
-    const prevArrow = document.querySelector('.swipers_arrow_a:nth-child(1)');
-    const nextArrow = document.querySelector('.swipers_arrow_a:nth-child(2)');
-
     
-    if (swiper.isBeginning) {
-        prevArrow.classList.add('disabled');
-    } else {
-        prevArrow.classList.remove('disabled');
-    }
-
-    
-    if (swiper.isEnd) {
-        nextArrow.classList.add('disabled');
-    } else {
-        nextArrow.classList.remove('disabled');
+        
+        if (swiper.isEnd) {
+            nextArrow.classList.add('disabled');
+        } else {
+            nextArrow.classList.remove('disabled');
+        }
     }
 }
 
-
+let mySwiper = document.querySelectorAll(".mySwiper");
+if(mySwiper.length){
 var swiper = new Swiper(".mySwiper", {
     pagination: {
     //   el: ".swiper-pagination",
@@ -245,8 +248,10 @@ var swiper = new Swiper(".mySwiper", {
         }
     },
   });
+}
   
-
+let mySwiper_s = document.querySelectorAll(".mySwiper_s");
+if(mySwiper_s.length){
   var swiper = new Swiper(".mySwiper_s", {
     slidesPerView: 8,
     // spaceBetween: 20,
@@ -260,7 +265,7 @@ var swiper = new Swiper(".mySwiper", {
     //   clickable: true,
     // },
   });
-
+}
   
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -287,30 +292,33 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 
-var swiper = new Swiper('.my_Swipers', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swipers-academic-arrow-a.next',
-        prevEl: '.swipers-academic-arrow-a.prev',
-    },
-    on: {
-        slideChange: function () {
-            updateArrowState(swiper);
+let my_Swipers = document.querySelectorAll(".my_Swipers");
+if(my_Swipers.length){
+    var swiper = new Swiper('.my_Swipers', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swipers-academic-arrow-a.next',
+            prevEl: '.swipers-academic-arrow-a.prev',
+        },
+        on: {
+            slideChange: function () {
+                updateArrowState(swiper);
+            }
         }
+    });
+    
+    function updateArrowState(swiper) {
+        document.querySelector('.prev').classList.toggle('disabled', swiper.isBeginning);
+        document.querySelector('.next').classList.toggle('disabled', swiper.isEnd);
     }
-});
-
-function updateArrowState(swiper) {
-    document.querySelector('.prev').classList.toggle('disabled', swiper.isBeginning);
-    document.querySelector('.next').classList.toggle('disabled', swiper.isEnd);
+    updateArrowState(swiper);
 }
 
-updateArrowState(swiper);
 
 
 const accItems = document.querySelectorAll(".accordion__item");
@@ -321,7 +329,8 @@ accItems.forEach(item => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+let mySwiperss = document.querySelectorAll(".mySwiperss");
+if(mySwiperss.length){
     var swiper = new Swiper('.mySwiperss', {
         slidesPerView: 2.3,
         spaceBetween: 10,
@@ -378,5 +387,78 @@ document.addEventListener("DOMContentLoaded", function () {
             nextArrow.classList.remove('disabled');
         }
     }
-});
+};
+
+
+
+let my_Swiper = document.querySelectorAll(".my_Swiper");
+if(my_Swiper.length){
+        var swiper = new Swiper(".my_Swiper", {
+            scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: false,
+            clickable:true,
+            },
+            slidesPerView: 2.3,
+            spaceBetween: 10,
+            breakpoints: {
+                320: { 
+                    slidesPerView: 1.2,
+                },
+                375: { 
+                    slidesPerView: 1.2,
+                },
+                425: { 
+                    slidesPerView: 1.5,
+                },
+                575: { 
+                    slidesPerView: 1.5,
+                },
+                768: { 
+                    slidesPerView: 2.3,
+                },
+                1024: { 
+                    slidesPerView: 2.3,
+                },
+                1200: { 
+                    slidesPerView: 3.3,
+                }
+            },
+        });
+    };
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll(".tabs-top-section-a");
+        const cards = document.querySelectorAll(".tabs-card");
+        
+        function filterCards(category) {
+            cards.forEach(card => {
+                if (category === "all" || card.getAttribute("data-category") === category) {
+                    card.style.display = "flex";
+                } else {
+                    card.style.display = "none"; 
+                }
+            });
+    
+            if (category !== "all") {
+                let visibleCards = document.querySelectorAll(".tabs-card[style='display: flex;']");
+                visibleCards.forEach((card, index) => {
+                    if (index >= 3) card.style.display = "none"; 
+                });
+            }
+        }
+    
+        buttons.forEach(button => {
+            button.addEventListener("click", function (e) {
+                e.preventDefault();
+                buttons.forEach(btn => btn.classList.remove("active"));
+                this.classList.add("active");
+                filterCards(this.getAttribute("data-filter"));
+            });
+        });
+    
+        filterCards("all");
+    });
+    
 

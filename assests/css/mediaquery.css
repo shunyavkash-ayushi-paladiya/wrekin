@@ -68,9 +68,6 @@
     .pageslider-link{
         display: none;
     }
-    .howto{
-      margin-top: -300px;
-    }
     .boarding-left-img::before {
         right: -4%;
         top: 4%;
@@ -247,7 +244,10 @@
         right: -6%;
         top: 6%;
     }
-    .character-right-section::before
+    .character-right-section::before{
+        right: -6%;
+        top: 6%;
+    }
     .request-inner:before{
         clip-path: polygon(0 0, 100% 0, 100% 64%, 0 65%);
         width: 100%;
@@ -268,11 +268,11 @@
     }
     .academic-left-section{
         flex-direction: row;
-        overflow-x: auto;
+        overflow: auto;
         max-height: 100%;
         max-width: none;
         gap: 20px;
-        padding: 0px;
+        padding: 10px;
         align-items: center;
         padding-inline: 20px;
         width: calc(100% + 40px);
@@ -286,11 +286,17 @@
         flex-direction: column;
         align-items: center;    
     }
-    .swipers-academic-arrows{
-        display: none;
-    }
     .academic-right-section{
         width: calc(100% - 0px);
+    }
+    .academic-left-anchor{
+        display: none;
+    }
+    .tabs-bottom-section{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .tabs {
+        transform: none;
     }
 }
 
@@ -330,7 +336,7 @@
         margin-top: 300px;
     }
     .text-section-head{
-        font-size: 61px;
+        font-size: 58px;
         letter-spacing: -1.4px;
         line-height: 105px;
     }
@@ -537,9 +543,6 @@
         letter-spacing: -0.96px;
         line-height: 60px;
     }
-    .welcome{
-        transform: translateY(-110%);
-    }
     .howto-inner{
         flex-direction: column;
     }
@@ -655,9 +658,6 @@
         letter-spacing: -0.8px;
         max-width: 300px;
         text-align: center;
-    }
-    .welcomes {
-        transform: translateY(-99%);
     }
     .column-inner{
         flex-direction: column;
@@ -798,6 +798,51 @@
         font-size: 40px;
         letter-spacing: -0.98px;
         line-height: 43px;
+    }
+    .scrollbar-anchor {
+        display: inline-block;
+        margin-top: 54px;
+    }
+    .scrollbar-a{
+        display: none;
+    }
+    .swiper-scrollbar{
+        display: none;
+    }
+    .collage-text{
+        max-width: 310px;
+        text-align: center;
+        font-size: 50px;
+    }
+    .collage-icon{
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+    .download-faqs{
+        display: flex;
+    }
+    .scrollbar-head{
+        max-width: 300px;
+        line-height: 50px;
+        font-size: 50px;
+        letter-spacing: -1px;
+    }
+    .report{
+        margin-top: -700px;
+    }
+    .tabs-bottom-section{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .tabs-top-section{
+        overflow: auto;
+    }
+    .theteam-para{
+      display: none;
+    }
+    .theteam-heading{
+        font-size: 40px;
+        letter-spacing: -0.8px;
+        line-height: 80px;
     }
  }
 
