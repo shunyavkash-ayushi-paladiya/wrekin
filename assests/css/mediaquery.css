@@ -3,11 +3,23 @@
         right: -6%;
         top: 6%;
     }
+    .boarding-left-image::before{
+        right: -6%;
+        top: 6%;
+    }
     .aboutus-right-section::before{
         right: -6%;
         top: 6%;
     }
     .character-right-section::before{
+        right: -6%;
+        top: 6%;
+    }
+    .employability-left-sections::before{
+        right: -6%;
+        top: 6%;
+    }
+    .boarding-left-images::before{
         right: -6%;
         top: 6%;
     }
@@ -20,11 +32,23 @@
         right: -4%;
         top: 4%;
     }
+    .boarding-left-image::before {
+        right: -4%;
+        top: 4%;
+    }
+    .boarding-left-images::before {
+        right: -4%;
+        top: 4%;
+    }
     .aboutus-right-section::before{
         right: -4%;
         top: 4%;
     }
     .character-right-section::before{
+        right: -4%;
+        top: 4%;
+    }
+    .employability-left-sections::before{
         right: -4%;
         top: 4%;
     }
@@ -72,11 +96,23 @@
         right: -4%;
         top: 4%;
     }
+    .boarding-left-image::before {
+        right: -4%;
+        top: 4%;
+    }
+    .boarding-left-images::before {
+        right: -4%;
+        top: 4%;
+    }
     .aboutus-right-section::before{
         right: -4%;
         top: 4%;
     }
     .character-right-section::before{
+        right: -4%;
+        top: 4%;
+    }
+    .employability-left-sections::before{
         right: -4%;
         top: 4%;
     }
@@ -237,16 +273,24 @@
         padding-top: 50px;
     }
     .boarding-left-img::before {
-        right: -6%;
-        top: 6%;
+        right: -4%;
+        top: 4%;
+    }
+    .boarding-left-images::before {
+        right: -4%;
+        top: 4%;
     }
     .aboutus-right-section::before{
-        right: -6%;
-        top: 6%;
+        right: -4%;
+        top: 4%;
     }
     .character-right-section::before{
-        right: -6%;
-        top: 6%;
+        right: -4%;
+        top: 4%;
+    }
+    .employability-left-sections::before{
+        right: -4%;
+        top: 4%;
     }
     .request-inner:before{
         clip-path: polygon(0 0, 100% 0, 100% 64%, 0 65%);
@@ -298,6 +342,81 @@
     .tabs {
         transform: none;
     }
+    .howto-inner{
+        flex-direction: column;
+    }
+    .boarding-inner{
+        gap: 100px;
+        flex-direction: column;
+    }
+    .learning-inner{
+        flex-direction: column-reverse;
+    }
+    .Co-Curricular-inner{
+        flex-direction: column;
+    }
+    .transport-inner{
+        flex-direction: column;
+        gap: 100px;
+    }
+    .recently-graduated-inner{
+        flex-direction: column-reverse;
+    }
+    .recently-graduated-inners{
+        flex-direction: column-reverse;
+        padding-top: 215px;
+    }
+    .aboutus-inner{
+        gap: 100px;
+        flex-direction: column-reverse;
+    }
+    .employability-inner{
+        flex-direction: column;
+    }
+    .employabilitys-inner{
+        flex-direction: column;
+    }
+    .character-inner{
+        flex-direction: column-reverse;
+    }
+    .international-inner{
+        flex-direction: column;
+    }
+    .art-inner{
+        flex-direction: column;
+    }
+    .support-head{
+        color: var(--forth);
+    }
+    .boarding-left-image{
+        display: none;
+    }
+    .boarding-left-images{
+        display: block;
+    }
+    .life-skill-inner{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .employabilitys-inners{
+        flex-direction: column;
+        padding-bottom: 0;
+    }               
+    .ways-grid{
+        flex-direction: column;
+    }
+    .ways-right-section{
+        margin-top: 0;
+    }
+    .curricular-inner{
+        flex-direction: column-reverse;
+    }
+    .curricular-head{
+        max-width: 285px;
+        font-size: 42px;
+        line-height: 50px;
+        letter-spacing: -0.84px;
+    }
 }
 
 @media screen and (max-width:610px){
@@ -308,7 +427,15 @@
         right: -4%;
         top: 4%;
     }
+    .boarding-left-images::before {
+        right: -4%;
+        top: 4%;
+    }
     .aboutus-right-section::before{
+        right: -4%;
+        top: 4%;
+    }
+    .employability-left-sections::before{
         right: -4%;
         top: 4%;
     }
@@ -543,9 +670,6 @@
         letter-spacing: -0.96px;
         line-height: 60px;
     }
-    .howto-inner{
-        flex-direction: column;
-    }
     .help-texts{
         flex-direction: column;
         align-items: baseline;
@@ -570,21 +694,9 @@
     .help-inner {
         padding: 40px;
     }
-    .transport-inner{
-        flex-direction: column;
-        gap: 100px;
-    }
     .trasport-anchor{
         flex-direction: column;
         align-items: baseline;
-    }
-    .boarding-inner{
-        gap: 100px;
-        flex-direction: column;
-    }
-    .aboutus-inner{
-        gap: 100px;
-        flex-direction: column-reverse;
     }
     .boardings-para{
         display: none;
@@ -600,9 +712,6 @@
     }
     .dresscode-a{
         width: 56px;
-    }
-    .recently-graduated-inner{
-        flex-direction: column-reverse;
     }
     .recently-graduated-img{
         position: relative;
@@ -675,20 +784,11 @@
     .exchange-inner {
         padding: 40px;
     }
-    .employability-inner{
-        flex-direction: column;
-    }
     .employability-right-text{
         font-size: 42px;
         letter-spacing: -0.84px;
         line-height: 50px;
         max-width: 285px;
-    }
-    .character-inner{
-        flex-direction: column-reverse;
-    }
-    .international-inner{
-        flex-direction: column;
     }
     .international-right-text{
         font-size: 42px;
@@ -791,9 +891,6 @@
         line-height: 50px;
         letter-spacing: -0.84px; 
     }
-    .art-inner{
-        flex-direction: column;
-    }
     .art-head{
         font-size: 40px;
         letter-spacing: -0.98px;
@@ -830,6 +927,9 @@
     .report{
         margin-top: -700px;
     }
+    .reports{
+        margin-top: 0;
+    }
     .tabs-bottom-section{
         grid-template-columns: repeat(1,1fr);
     }
@@ -844,6 +944,64 @@
         letter-spacing: -0.8px;
         line-height: 80px;
     }
+    .opportunities-inner{
+        flex-direction: column;
+    }
+    .opportunities-text{
+        font-size: 40px;
+        line-height: 36px;
+        letter-spacing: -0.8px;
+        text-align: center;
+    }
+    .sixth-forms-heading{
+        font-size: 48px;
+        letter-spacing: -0.96px;
+        line-height: 49px;
+    }
+    .need-help{
+        right: auto;
+    }
+    .international-heads{
+        font-size: 40px;
+        letter-spacing: -0.8px;
+        line-height: 80px;
+    }
+    .report-text{
+        max-width: 290px;
+        font-size: 44px;
+        line-height: 48px;
+        letter-spacing: -0.88px;  
+    }
+    .ways-left-text1{
+        max-width: 194px;
+        font-size: 35px;
+        letter-spacing: -0.7px;
+        line-height: 33px;
+    }
+    .ways-left-text2{
+        max-width: 194px;
+        font-size: 35px;
+        letter-spacing: -0.7px;
+        line-height: 33px;
+    }
+    .ways-left-text3{
+        max-width: 194px;
+        font-size: 35px;
+        letter-spacing: -0.7px;
+        line-height: 33px;
+    }
+    .ways-left-text4{
+        max-width: 194px;
+        font-size: 35px;
+        letter-spacing: -0.7px;
+        line-height: 33px;
+    }
+    .admissionses-heading{
+        color: var(--secondary);
+    }
+    .admissionses-para{
+        color: var(--secondary);
+      }
  }
 
 
@@ -867,11 +1025,19 @@
         right: -7%;
         top: 7%;
     }
+    .boarding-left-images::before {
+        right: -7%;
+        top: 7%;
+    }
     .aboutus-right-section::before{
         right: -7%;
         top: 7%;
     }
     .character-right-section::before{
+        right: -7%;
+        top: 7%;
+    }
+    .employability-left-sections::before{
         right: -7%;
         top: 7%;
     }

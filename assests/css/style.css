@@ -1337,6 +1337,9 @@ section.slidetypes{
 .download-a img{
     width: 100%;
     height: 100%;
+    background-color: rgba(255, 255, 255, 0.201);
+    padding: 10px;
+    border-radius: 15px;
 }
 
 /* scrollbar section  */
@@ -2631,6 +2634,7 @@ color: var(--forth);
     font-size: 50px;
     letter-spacing: -1px;
     line-height: 70px;
+    font-weight: 600;
 }
 
 .boarding-para{
@@ -2749,7 +2753,8 @@ color: var(--forth);
 }
 
 .recently-graduated-inner{
-    padding-block: 176px;
+    padding-top: 176px;
+    padding-bottom: 176px;
 }
 
 .recently-graduated::before{
@@ -3011,10 +3016,6 @@ color: var(--forth);
     transition: all 0.3s ease;
 }
 
-.wel{
-    transform: translateY(-81%);
-}
-
 .welcome-a:hover{
     background-color: transparent;
     border: 2px solid var(--primary);
@@ -3024,7 +3025,7 @@ color: var(--forth);
 
 .aboutus{
     background-color: #F0F4F3;
-    margin-top: -450px;
+    position: relative;
 }
 
 .aboutus-inner{
@@ -3553,6 +3554,7 @@ color: var(--forth);
     display: flex;
     gap: 20px;
     align-items: center;
+    margin-bottom: 70px;
  }
 
  .art-a{
@@ -3729,4 +3731,689 @@ color: var(--forth);
 
 .tabs-card{
    flex-direction: column;
+}
+
+/* wrekin year 7-8 page css  */
+
+/* learning section  */
+
+.learning-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 150px;
+    gap: 100px;
+    padding-top: 30px;
+}
+
+/* Co-Curricular section  */
+
+.Co-Curricular-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    gap: 100px;
+    padding-top: 30px;
+}
+
+/* employabilitys section  */
+
+.employabilitys-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    gap: 100px;
+}
+
+/* support section  */
+
+.support-head{
+    color: var(--primary);
+    font-size: 50px;
+    letter-spacing: -1px;
+    line-height: 70px;
+    font-weight: 300;
+}
+
+.support-head strong{
+    color: var(--primary);
+}
+
+.boarding-left-images{
+    position: relative;
+    z-index: 1;
+    display: none;
+}
+
+  .boarding-left-images img{
+    width: 100%;
+    height: 100%;
+ } 
+
+  .boarding-left-images::before{
+    content: '';
+    position: absolute;
+    right: -10%;
+    top: 10%;
+    background-color:var(--forth) ;
+    width: 100%;
+    height: 100%;
+    max-width: 492px;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+.boarding-left-image{
+    position: relative;
+    z-index: 1;
+}
+
+  .boarding-left-image img{
+    width: 100%;
+    height: 100%;
+ } 
+
+  .boarding-left-image::before{
+    content: '';
+    position: absolute;
+    right: -10%;
+    top: 10%;
+    background-color:var(--forth) ;
+    width: 100%;
+    height: 100%;
+    max-width: 492px;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+/* admission section  */
+
+.admission-entry-anchor{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 20px 40px;
+    background-color: var(--forth);
+    border: 2px solid var(--forth);
+    color: var(--secondary);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.admission-entry-anchor:hover{
+    background-color:transparent ;
+    border: 2px solid var(--forth);
+    color:var(--forth);
+}
+
+/* Wrekin Sixth Form page css  */
+
+/* welcome to sixth form section */
+
+.sixth-forms{
+    background-color: var(--secondary);
+    position: relative;
+    border-radius: 30px 30px 0px 0px;
+}
+
+.sixth-forms::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url("../images/section/Subtraction\ 7.png");
+    width: 100%;
+    height: 100%;
+    max-width: 403px;
+    max-height:1062px;
+    background-repeat: no-repeat;
+    object-fit: contain;
+}
+
+.sixth-forms-inner{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.sixth-forms-heading{
+  font-weight: 300;
+  font-size: 55px;
+  letter-spacing: -1.1px;
+  line-height: 70px;
+  color: var(--primary);
+}
+
+.sixth-forms-headings{
+    font-weight: 300;
+    font-size: 55px;
+    letter-spacing: -1.1px;
+    line-height: 70px;
+    color: var(--primary);
+    margin-top: 50px;
+}
+
+/* report section  */
+
+.downloads-a img{
+    width: 100%;
+    height: 100%;
+    background-color: var(--forth);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/* life skill section  */
+
+.life-skill-left-section img{
+    width: 100%;
+    height: 100%;
+}
+
+.life-skill-left-section::after{
+    content: '';
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    background-color:var(--forth) ;
+    width: 100%;
+    height: 100%;
+    max-width: 492px;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+.life-skill-left-section{
+    position: relative;
+    z-index: 1;
+}
+
+.life-skill-inner{
+    display: flex;
+    margin-top: 120px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    margin-bottom: 70px;
+}
+
+.life-skill-right-section-text{
+    color: var(--primary);
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 70px;
+}
+
+.life-skill-para{
+    font-size: 16px;
+    color: var(--primary);
+    line-height: 28px;
+    max-width: 600px;
+    font-weight: 500;
+    margin-top: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.life-skill-a{
+    background-color: var(--forth);
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid var(--forth);
+    line-height: 24px;
+    margin-top: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    padding: 20px 40px;
+}
+
+.life-skill-a:hover{
+   background-color: transparent;
+   border: 2px solid var(--primary);
+   color: var(--primary);
+}
+
+/* employability section  */
+
+.employabilitys-inners {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    gap: 100px;
+    flex-direction: row-reverse;
+}
+
+.employability-left-sections{
+    position: relative;
+    z-index: 1;
+}
+
+.employability-left-sections::before{
+    content: '';
+    position: absolute;
+    right: -10%;
+    top: 10%;
+    background-color:var(--forth) ;
+    width: 100%;
+    height: 100%;
+    max-width: 492px;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+.employability-left-sections img{
+    width: 100%;
+    height: 100%;
+ }
+
+ .recently-graduated-inners{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding-top: 250px;
+    padding-bottom: 176px;
+}
+
+.swiper_card_inners{
+    margin-top: -75px;
+}
+
+/* opportunities section  */
+
+.opportunities{
+    background-image: url(../images/section/advanture-men.png);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.opportunities-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin-top: 100px;
+}
+
+.opportunities-text{
+    font-size: 55px;
+    font-weight: 400;
+    letter-spacing: -1.1px;
+    line-height: 60px;
+    color: var(--secondary);
+    max-width: 375px;
+}
+
+.opportunities-a{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 20px 40px;
+    background-color: var(--forth);
+    border: 2px solid var(--forth);
+    color: var(--secondary);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.opportunities-a:hover{
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+/* wrekin international page css  */
+
+.internationals img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.international-inners{
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.international-texts{
+    position: relative;
+}
+
+.international-heads{
+    font-size: 89px;
+    color: var(--secondary);
+    font-weight: 600;
+    line-height: 80px;
+    letter-spacing: -1.78px;
+}
+
+.need-help{
+    background-color: var(--primary);
+    border-radius: 21px;
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    max-height: 40px;
+    padding: 10px;
+    gap: 10px;
+    position: fixed;
+    top: 75%;
+    right: 0%;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.need-help img{
+    width: 33px;
+    height: 33px;
+}
+
+.need-help-para{
+    font-size: 18px;
+    font-weight: 100;
+    max-width: 230px;
+    color: var(--secondary);
+}
+
+/* welcome to wrekin collage  */
+
+.collages{
+    background-color: var(--secondary);
+    border-radius: 30px 30px 0 0;
+    position: relative;
+}
+
+.collages::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url("../images/section/Subtraction\ 7.png");
+    width: 100%;
+    height: 100%;
+    max-width: 403px;
+    min-height:699px ;
+    background-repeat: no-repeat;
+    object-fit: contain;
+}
+
+.collages-inner{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* ways you can join us section */
+.ways{
+    background-color: var(--secondary);
+    position: relative;
+}
+
+.ways-head{
+    font-size: 49px;
+    font-weight: 600;
+    letter-spacing: -0.98px;
+    line-height: 62px;
+    color: var(--primary);
+    text-align: center;
+}
+
+.ways-left-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ways-right-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ways-left-section-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.ways-grid{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.ways-right-section{
+    margin-top: 200px;
+}
+
+.ways-left-text1{
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: -1.2px;
+    line-height: 63px;
+    color: var(--secondary);
+    opacity:0 ;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    transform: translateY(100%);
+    max-width: 332px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.ways-left-section-img{
+    position: relative;
+}
+
+.ways-left-section-img:hover .ways-left-text1{
+    opacity: 1;
+    transform: translateY(0%);
+    z-index: 2;
+}
+
+.ways-left-section-img:hover .ways-left-text2{
+    opacity: 1;
+    transform: translateY(0%);
+    z-index: 2;
+}
+
+.ways-left-section-img:hover .ways-left-text3{
+    opacity: 1;
+    transform: translateY(0%);
+    z-index: 2;
+}
+
+.ways-inner{
+    padding-top: 50px;
+}
+
+.ways-left-section-img:hover .ways-left-text4{
+    opacity: 1;
+    transform: translateY(0%);
+    z-index: 2;
+}
+
+
+
+.ways-left-text2{
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: -1.2px;
+    line-height: 63px;
+    color: var(--secondary);
+    opacity:0 ;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translateY(100%);
+    max-width: 346px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.ways-left-text3{
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: -1.2px;
+    line-height: 63px;
+    color: var(--secondary);
+    opacity: 0;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translateY(100%);
+    max-width: 260px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.ways-left-text4{
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: -1.2px;
+    line-height: 63px;
+    color: var(--secondary);
+    opacity:0 ;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    transform: translateY(100%);
+    max-width: 320px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+/* curricular section   */
+
+.curricular-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    margin-top: 100px;
+}
+
+.curricular-head{
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing:-1px ;
+    line-height:60px ;
+    color: var(--forth);
+    max-width: 336px;
+}
+
+.curricular-head strong{
+    color: var(--primary);
+}
+
+/* student wellbeing programm section */
+
+.student-programm-faq{
+    background-color: white;
+    box-shadow: 0px 0px 36px #0000002e;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.student-programm-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 150px;
+}
+
+.student-programm-text{
+    color: var(--primary);
+    font-size: 22px;
+    letter-spacing:-0.22px;
+    line-height: 34px;
+    font-weight: 600;
+    max-width: 330px;
+}
+
+.student-programm-a{
+    width: 100%;
+    height: 100%;
+}
+
+.student-programm-a img{
+background-color: var(--primary);
+padding: 10px;
+border-radius: 15px;
+}
+
+/* admission section */
+
+.admissionses{
+    background-color:var(--primary);
+}
+
+.admissionses-inner{
+    margin-top: 100px;
+    padding-top: 100px;
+    padding-bottom: 300px;
+}
+
+.admissionses-heading{
+    color: var(--secondary);
+    max-width: 450px;
+}
+
+.admissionses-para{
+  color: var(--secondary);
+}
+
+.admissionses-slider{
+    transform: translateY(-15%);
+}
+
+.admissionses-inners{
+    padding-top: 290px;
+}
+
+.helps{
+    position: relative;
+    z-index: 1;
+}
+
+.maps{
+    margin-top: -75px;
 }
