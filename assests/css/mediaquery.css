@@ -362,9 +362,12 @@
     .recently-graduated-inner{
         flex-direction: column-reverse;
     }
-    .recently-graduated-inners{
+    .greate-things-inner{
         flex-direction: column-reverse;
-        padding-top: 215px;
+        padding-top: 100px;
+    }
+    .greate-things{
+        transform: none;
     }
     .aboutus-inner{
         gap: 100px;
@@ -417,7 +420,61 @@
         line-height: 50px;
         letter-spacing: -0.84px;
     }
-}
+    .swiper_card_inners{
+        margin-top: -14px;
+      }
+      .fees-right-para{
+        display: none;
+      }
+      .slidings{
+        transform: none;
+      }
+      .fees-inner{
+        padding-bottom: 120px;
+      }
+      .hamnah-smith{
+        transform: none;
+      }
+      .hamnah-smith-inner{
+        padding-top: 100px;
+        flex-direction: column-reverse;
+      }
+      .hamnah-smith::before{
+        top: 0%;
+      }
+      .maps{
+        margin-top: 0;
+      }
+      .slider-sections {
+        margin-top: -417px;
+    }
+    .swipers_card_inners{
+        padding-top: 300px;
+    }
+    .form-section-inner{
+        flex-direction: column;
+        gap: 50px;
+        align-items: baseline;
+    }
+    .form-left-section{
+        width: 100%;
+    }
+    .form-right-section{
+        width: 100%;
+    }
+    .skill-inner{
+        flex-direction: column-reverse;
+    }
+    .advanture-right-paras{
+        display: none;
+    }
+    .bussiness-inner{
+        flex-direction: column;
+    }
+    .duke-inner{
+        flex-direction: column-reverse;
+    }
+    }
 
 @media screen and (max-width:610px){
     .sixth-form-inner{
@@ -442,6 +499,12 @@
     .character-right-section::before
     .admission-headings{
         font-size: 84px;
+    }
+}
+
+@media screen and (max-width:714px) and (min-width:576px){
+    .slider-sections {
+        margin-top: -516px;
     }
 }
 
@@ -615,7 +678,7 @@
         left: 86%;
     }
     .swiper_card_inner {
-        margin-top: -83px;
+        margin-top: -163px;
         padding-top: 135px;
     }
     .bottom-footer-top{
@@ -718,6 +781,17 @@
         z-index: 0;
     }
     .recently-graduated-head{
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 40px;
+        max-width: 585px;
+        color: var(--secondary);
+    }
+    .greate-things-img{
+        position: relative;
+        z-index: 0;
+    }
+    .greate-things-head{
         font-size: 30px;
         font-weight: 400;
         line-height: 40px;
@@ -1002,6 +1076,30 @@
     .admissionses-para{
         color: var(--secondary);
       }
+      .swiper_card_inners{
+        margin-top: -14px;
+      }
+      .swipers_card_inners{
+        padding-top: 300px;
+    }
+    .form-section{
+        display: none;
+    }
+    .get-in{
+        display: block;
+    }
+    .advanture-text{
+        font-size: 54px;
+        letter-spacing: -1.08px;
+        line-height: 61px;
+        max-width: 268px;
+    }
+    .advanture-left-para{
+        color: var(--secondary);
+    }
+    .sixths-form{
+        margin-top: 0px;
+    }
  }
 
 
