@@ -1032,6 +1032,7 @@ section.slidetypes{
     letter-spacing: -0.18px;
     line-height: 22px;
     color: var(--secondary);
+    cursor: pointer;
 }
 
 .form-list input[type="checkbox"] {
