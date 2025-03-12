@@ -23,6 +23,10 @@
         right: -6%;
         top: 6%;
     }
+    .chapel-right-section::before{
+        right: -6%;
+        top: 6%;
+    }
 }
 @media screen and (max-width:1330px){
     .hero-section-left{
@@ -49,6 +53,10 @@
         top: 4%;
     }
     .employability-left-sections::before{
+        right: -4%;
+        top: 4%;
+    }
+    .chapel-right-section::before{
         right: -4%;
         top: 4%;
     }
@@ -113,6 +121,10 @@
         top: 4%;
     }
     .employability-left-sections::before{
+        right: -4%;
+        top: 4%;
+    }
+    .chapel-right-section::before{
         right: -4%;
         top: 4%;
     }
@@ -292,6 +304,10 @@
         right: -4%;
         top: 4%;
     }
+    .chapel-right-section::before{
+        right: -4%;
+        top: 4%;
+    }
     .request-inner:before{
         clip-path: polygon(0 0, 100% 0, 100% 64%, 0 65%);
         width: 100%;
@@ -426,9 +442,6 @@
       .fees-right-para{
         display: none;
       }
-      .slidings{
-        transform: none;
-      }
       .fees-inner{
         padding-bottom: 120px;
       }
@@ -442,14 +455,8 @@
       .hamnah-smith::before{
         top: 0%;
       }
-      .maps{
-        margin-top: 0;
-      }
       .slider-sections {
-        margin-top: -417px;
-    }
-    .swipers_card_inners{
-        padding-top: 300px;
+        margin-top: 0px;
     }
     .form-section-inner{
         flex-direction: column;
@@ -473,6 +480,16 @@
     }
     .duke-inner{
         flex-direction: column-reverse;
+    }
+    .sliders-section{
+        margin-top: 0px;
+    }
+    .chapel-inner{
+        flex-direction: column-reverse;
+    }
+    .house-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
     }
 
@@ -499,12 +516,6 @@
     .character-right-section::before
     .admission-headings{
         font-size: 84px;
-    }
-}
-
-@media screen and (max-width:714px) and (min-width:576px){
-    .slider-sections {
-        margin-top: -516px;
     }
 }
 
@@ -657,6 +668,7 @@
     }
     .slider-section{
         padding-bottom: 147px;
+        margin-top: 0;
     }
     .visit-inner{
         flex-direction: column;
@@ -676,10 +688,6 @@
     }
     .submit-btn {
         left: 86%;
-    }
-    .swiper_card_inner {
-        margin-top: -163px;
-        padding-top: 135px;
     }
     .bottom-footer-top{
         display: none;
@@ -1079,9 +1087,6 @@
       .swiper_card_inners{
         margin-top: -14px;
       }
-      .swipers_card_inners{
-        padding-top: 300px;
-    }
     .form-section{
         display: none;
     }
@@ -1099,6 +1104,13 @@
     }
     .sixths-form{
         margin-top: 0px;
+    }
+    .house-cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .house-head{
+        font-size: 80px;
     }
  }
 
@@ -1136,6 +1148,10 @@
         top: 7%;
     }
     .employability-left-sections::before{
+        right: -7%;
+        top: 7%;
+    }
+    .chapel-right-section::before{
         right: -7%;
         top: 7%;
     }

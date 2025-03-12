@@ -144,6 +144,75 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+window.addEventListener("scroll", function () {
+    let header = document.querySelector(".headerr");
+
+    if (window.scrollY >= 40) {
+        header.style.backgroundColor = "#002A4D"; 
+        header.style.transition = "background-color 0.3s ease, padding 0.3s ease"; 
+        header.style.padding = "10px 0"; 
+    } else {
+        header.style.backgroundColor = "transparent"; 
+        header.style.padding = "31px 0";
+    }
+});
+
+
+window.addEventListener("scroll", function () {
+    let header = document.querySelector(".headerr");
+    if (window.scrollY >= 40) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+
+window.addEventListener("scroll", function () {
+    let header = document.querySelector(".headers");
+
+    if (window.scrollY >= 40) {
+        header.style.backgroundColor = "#fff"; 
+        header.style.transition = "background-color 0.3s ease, padding 0.3s ease"; 
+        header.style.padding = "10px 0"; 
+    } else {
+        header.style.backgroundColor = "#fff"; 
+        header.style.padding = "31px 0";
+    }
+});
+
+
+window.addEventListener("scroll", function () {
+    let header = document.querySelector(".headers");
+    if (window.scrollY >= 40) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+
+window.addEventListener("scroll", function () {
+    let header = document.querySelector(".header");
+
+    if (window.scrollY >= 40) {
+        header.style.backgroundColor = "#002A4D"; 
+        header.style.transition = "background-color 0.3s ease, padding 0.3s ease"; 
+        header.style.padding = "10px 0"; 
+    } else {
+        header.style.backgroundColor = "#002A4D"; 
+        header.style.padding = "31px 0";
+    }
+});
+
+
+window.addEventListener("scroll", function () {
+    let header = document.querySelector(".header");
+    if (window.scrollY >= 40) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+
 let mySwipers = document.querySelectorAll(".mySwipers");
 if(mySwipers.length){
     var swiper = new Swiper('.mySwipers', {
@@ -544,3 +613,122 @@ if(my_Swiper.length){
     });
     
 
+    let event_Swiper = document.querySelectorAll(".event_Swiper");
+    if(event_Swiper.length){
+        var swiper = new Swiper('.event_Swiper', {
+            slidesPerView: 2.3,
+            spaceBetween: 20,
+            breakpoints: {
+                320: { 
+                    slidesPerView: 1.1,
+                },
+                375: { 
+                    slidesPerView: 1.3,
+                },
+                425: { 
+                    slidesPerView: 1.5,
+                },
+                575: { 
+                    slidesPerView: 1.5,
+                },
+                768: { 
+                    slidesPerView: 2.3,
+                },
+                1024: { 
+                    slidesPerView: 2.3,
+                },
+                1200: { 
+                    slidesPerView: 2.3,
+                }
+            },
+            navigation: {
+                nextEl: '.event_arrow_a.next',
+                prevEl: '.event_arrow_a.prev',
+            },
+            on: {
+                init: function () {
+                    updateArrowState(this);
+                },
+                slideChange: function () {
+                    updateArrowState(this);
+                }
+            }
+        });
+    
+        function updateArrowState(swiper) {
+            let prevArrow = document.querySelector('.event_arrow_a.prev');
+            let nextArrow = document.querySelector('.event_arrow_a.next');
+    
+            if (swiper.isBeginning) {
+                prevArrow.classList.add('disabled');
+            } else {
+                prevArrow.classList.remove('disabled');
+            }
+    
+            if (swiper.isEnd) {
+                nextArrow.classList.add('disabled');
+            } else {
+                nextArrow.classList.remove('disabled');
+            }
+        }
+    };
+
+    let oversocial_slider = document.querySelectorAll(".oversocial_slider");
+    if(oversocial_slider.length){
+        var swiper = new Swiper('.oversocial_slider', {
+            slidesPerView: 2.3,
+            spaceBetween: 20,
+            breakpoints: {
+                320: { 
+                    slidesPerView: 1.1,
+                },
+                375: { 
+                    slidesPerView: 1.3,
+                },
+                425: { 
+                    slidesPerView: 1.5,
+                },
+                575: { 
+                    slidesPerView: 1.5,
+                },
+                768: { 
+                    slidesPerView: 2.3,
+                },
+                1024: { 
+                    slidesPerView: 2.3,
+                },
+                1200: { 
+                    slidesPerView: 2.3,
+                }
+            },
+            navigation: {
+                nextEl: '.oversocial_arrow_a.next',
+                prevEl: '.oversocial_arrow_a.prev',
+            },
+            on: {
+                init: function () {
+                    updateArrowState(this);
+                },
+                slideChange: function () {
+                    updateArrowState(this);
+                }
+            }
+        });
+    
+        function updateArrowState(swiper) {
+            let prevArrow = document.querySelector('.oversocial_arrow_a.prev');
+            let nextArrow = document.querySelector('.oversocial_arrow_a.next');
+    
+            if (swiper.isBeginning) {
+                prevArrow.classList.add('disabled');
+            } else {
+                prevArrow.classList.remove('disabled');
+            }
+    
+            if (swiper.isEnd) {
+                nextArrow.classList.add('disabled');
+            } else {
+                nextArrow.classList.remove('disabled');
+            }
+        }
+    };
