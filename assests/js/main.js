@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const submenu = document.getElementById("submenu");
     const menuList = document.querySelector(".menu-list");
 
-    // Submenu data with colors
+    
     const submenus = {
         wrekin: {
             items: ["Homepage", "Admissions", "International Admissions", "Academic", "Wrekin Life", "Year 7-8", "Sixth Form", "Co-Curricular"],
@@ -79,16 +79,16 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     };
 
-    // Set default background color
+   
     menuOverlay.style.backgroundColor = "#4B4F61"; 
 
-    // Open menu overlay
+    
     menuBtn.addEventListener("click", function () {
         menuOverlay.classList.add("active");
         menuOverlay.style.backgroundColor = "#4B4F61"; 
     });
 
-    // Close menu overlay
+    
     closeBtn.addEventListener("click", function () {
         menuOverlay.classList.remove("active");
         submenu.classList.remove("active"); 
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
         menuOverlay.style.backgroundColor = "#4B4F61"; 
     });
 
-    // Handle menu item clicks
+   
     menuItems.forEach((item) => {
         item.addEventListener("click", function (e) {
             e.preventDefault();
@@ -213,71 +213,48 @@ window.addEventListener("scroll", function () {
     }
 });
 
-let mySwipers = document.querySelectorAll(".mySwipers");
-if(mySwipers.length){
-    var swiper = new Swiper('.mySwipers', {
-        slidesPerView: 4,
-        spaceBetween: 30, 
-        // centeredSlides: true, 
-        // loop: true, 
-        pagination: {
-            // el: '.swiper-pagination',
-            // clickable: true,
-        },
-        navigation: {
-            nextEl: '.swipers_arrow_a:nth-child(2)',  
-            prevEl: '.swipers_arrow_a:nth-child(1)', 
-        },
-        breakpoints: {
-            320: { 
-                slidesPerView: 1,
+document.addEventListener("DOMContentLoaded", function () {
+    let swiperElement = document.querySelector(".mySwipers");
+
+    if (swiperElement) {
+        var swiper = new Swiper(".mySwipers", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swipers_arrow_a.next",  
+                prevEl: ".swipers_arrow_a.prev",  
             },
-            375: { 
-                slidesPerView: 1.5,
+            breakpoints: {
+                320: { slidesPerView: 1 },
+                375: { slidesPerView: 1.5 },
+                425: { slidesPerView: 1.5 },
+                575: { slidesPerView: 2 },
+                768: { slidesPerView: 2.5 },
+                1024: { slidesPerView: 3 },
+                1200: { slidesPerView: 3.5 }
             },
-            425: { 
-                slidesPerView: 1.5,
-            },
-            575: { 
-                slidesPerView: 2,
-            },
-            768: { 
-                slidesPerView: 2.5,
-            },
-            1024: { 
-                slidesPerView: 3,
-            },
-            1200: { 
-                slidesPerView: 3.5,
+            on: {
+                init: function () {
+                    updateArrowState(this); 
+                },
+                slideChange: function () {
+                    updateArrowState(this); 
+                }
             }
-        },
-        on: {
-            slideChange: function () {
-                updateArrowState(swiper);
+        });
+
+        function updateArrowState(swiper) {
+            const prevArrow = document.querySelector(".swipers_arrow_a.prev");
+            const nextArrow = document.querySelector(".swipers_arrow_a.next");
+
+            if (prevArrow && nextArrow) {
+                prevArrow.classList.toggle("disabled", swiper.isBeginning);
+                nextArrow.classList.toggle("disabled", swiper.isEnd);
             }
-        }
-    });
-    
-    
-    function updateArrowState(swiper) {
-        const prevArrow = document.querySelector('.swipers_arrow_a:nth-child(1)');
-        const nextArrow = document.querySelector('.swipers_arrow_a:nth-child(2)');
-    
-        
-        if (swiper.isBeginning) {
-            prevArrow.classList.add('disabled');
-        } else {
-            prevArrow.classList.remove('disabled');
-        }
-    
-        
-        if (swiper.isEnd) {
-            nextArrow.classList.add('disabled');
-        } else {
-            nextArrow.classList.remove('disabled');
         }
     }
-}
+});
+
 
 let mySwiper = document.querySelectorAll(".mySwiper");
 if(mySwiper.length){
@@ -443,33 +420,38 @@ var swiper = new Swiper(".sliding_sliders", {
 });
 
 
-let my_Swipers = document.querySelectorAll(".my_Swipers");
-if(my_Swipers.length){
-    var swiper = new Swiper('.my_Swipers', {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swipers-academic-arrow-a.next',
-            prevEl: '.swipers-academic-arrow-a.prev',
-        },
-        on: {
-            slideChange: function () {
-                updateArrowState(swiper);
+document.addEventListener("DOMContentLoaded", function () {
+    let swiperElement = document.querySelector(".my_Swipers");
+
+    if (swiperElement) {
+        var swiper = new Swiper(".my_Swipers", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swipers-academic-arrow-a.next",
+                prevEl: ".swipers-academic-arrow-a.prev",
+            },
+            on: {
+                init: function () {
+                    updateArrowState(this); 
+                },
+                slideChange: function () {
+                    updateArrowState(this);
+                }
+            }
+        });
+
+        function updateArrowState(swiper) {
+            let prevArrow = document.querySelector(".swipers-academic-arrow-a.prev");
+            let nextArrow = document.querySelector(".swipers-academic-arrow-a.next");
+
+            if (prevArrow && nextArrow) {
+                prevArrow.classList.toggle("disabled", swiper.isBeginning);
+                nextArrow.classList.toggle("disabled", swiper.isEnd);
             }
         }
-    });
-    
-    function updateArrowState(swiper) {
-        document.querySelector('.prev').classList.toggle('disabled', swiper.isBeginning);
-        document.querySelector('.next').classList.toggle('disabled', swiper.isEnd);
     }
-    updateArrowState(swiper);
-}
-
+});
 
 
 const accItems = document.querySelectorAll(".accordion__item");
@@ -613,122 +595,139 @@ if(my_Swiper.length){
     });
     
 
-    let event_Swiper = document.querySelectorAll(".event_Swiper");
-    if(event_Swiper.length){
-        var swiper = new Swiper('.event_Swiper', {
-            slidesPerView: 2.3,
-            spaceBetween: 20,
-            breakpoints: {
-                320: { 
-                    slidesPerView: 1.1,
-                },
-                375: { 
-                    slidesPerView: 1.3,
-                },
-                425: { 
-                    slidesPerView: 1.5,
-                },
-                575: { 
-                    slidesPerView: 1.5,
-                },
-                768: { 
+    document.addEventListener("DOMContentLoaded", function () {
+        let eventSwipers = document.querySelectorAll(".event_Swiper");
+    
+        if (eventSwipers.length) {
+            eventSwipers.forEach((swiperElement) => {
+                let swiper = new Swiper(swiperElement, {
                     slidesPerView: 2.3,
-                },
-                1024: { 
-                    slidesPerView: 2.3,
-                },
-                1200: { 
-                    slidesPerView: 2.3,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        320: { slidesPerView: 1.1 },
+                        375: { slidesPerView: 1.3 },
+                        425: { slidesPerView: 1.5 },
+                        575: { slidesPerView: 1.5 },
+                        768: { slidesPerView: 2.3 },
+                        1024: { slidesPerView: 2.3 },
+                        1200: { slidesPerView: 2.3 }
+                    },
+                    navigation: {
+                        nextEl: ".event_arrow_a.next",
+                        prevEl: ".event_arrow_a.prev",
+                    },
+                    on: {
+                        init: function () {
+                            setTimeout(() => updateArrowState(this), 100);
+                        },
+                        slideChange: function () {
+                            updateArrowState(this);
+                        }
+                    }
+                });
+    
+                function updateArrowState(swiper) {
+                    let prevArrow = document.querySelector(".event_arrow_a.prev");
+                    let nextArrow = document.querySelector(".event_arrow_a.next");
+    
+                    if (prevArrow && nextArrow) {
+                        prevArrow.classList.toggle("disabled", swiper.isBeginning);
+                        nextArrow.classList.toggle("disabled", swiper.isEnd);
+                    }
                 }
-            },
-            navigation: {
-                nextEl: '.event_arrow_a.next',
-                prevEl: '.event_arrow_a.prev',
-            },
-            on: {
-                init: function () {
-                    updateArrowState(this);
-                },
-                slideChange: function () {
-                    updateArrowState(this);
-                }
-            }
-        });
-    
-        function updateArrowState(swiper) {
-            let prevArrow = document.querySelector('.event_arrow_a.prev');
-            let nextArrow = document.querySelector('.event_arrow_a.next');
-    
-            if (swiper.isBeginning) {
-                prevArrow.classList.add('disabled');
-            } else {
-                prevArrow.classList.remove('disabled');
-            }
-    
-            if (swiper.isEnd) {
-                nextArrow.classList.add('disabled');
-            } else {
-                nextArrow.classList.remove('disabled');
-            }
+            });
         }
-    };
+    });
 
-    let oversocial_slider = document.querySelectorAll(".oversocial_slider");
-    if(oversocial_slider.length){
-        var swiper = new Swiper('.oversocial_slider', {
-            slidesPerView: 2.3,
-            spaceBetween: 20,
-            breakpoints: {
-                320: { 
-                    slidesPerView: 1.1,
-                },
-                375: { 
-                    slidesPerView: 1.3,
-                },
-                425: { 
-                    slidesPerView: 1.5,
-                },
-                575: { 
-                    slidesPerView: 1.5,
-                },
-                768: { 
+
+    document.addEventListener("DOMContentLoaded", function () {
+        let SchoolSwipers = document.querySelectorAll(".School_Swiper");
+    
+        if (SchoolSwipers.length) {
+            SchoolSwipers.forEach((swiperElement) => {
+                let swiper = new Swiper(swiperElement, {
                     slidesPerView: 2.3,
-                },
-                1024: { 
-                    slidesPerView: 2.3,
-                },
-                1200: { 
-                    slidesPerView: 2.3,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        320: { slidesPerView: 1.1 },
+                        375: { slidesPerView: 1.3 },
+                        425: { slidesPerView: 1.5 },
+                        575: { slidesPerView: 1.5 },
+                        768: { slidesPerView: 2.3 },
+                        1024: { slidesPerView: 2.3 },
+                        1200: { slidesPerView: 2.3 }
+                    },
+                    navigation: {
+                        nextEl: ".School_arrow_a.next",
+                        prevEl: ".School_arrow_a.prev",
+                    },
+                    on: {
+                        init: function () {
+                            setTimeout(() => updateArrowState(this), 100);
+                        },
+                        slideChange: function () {
+                            updateArrowState(this);
+                        }
+                    }
+                });
+    
+                function updateArrowState(swiper) {
+                    let prevArrow = document.querySelector(".School_arrow_a.prev");
+                    let nextArrow = document.querySelector(".School_arrow_a.next");
+    
+                    if (prevArrow && nextArrow) {
+                        prevArrow.classList.toggle("disabled", swiper.isBeginning);
+                        nextArrow.classList.toggle("disabled", swiper.isEnd);
+                    }
                 }
-            },
-            navigation: {
-                nextEl: '.oversocial_arrow_a.next',
-                prevEl: '.oversocial_arrow_a.prev',
-            },
-            on: {
-                init: function () {
-                    updateArrowState(this);
-                },
-                slideChange: function () {
-                    updateArrowState(this);
-                }
-            }
-        });
-    
-        function updateArrowState(swiper) {
-            let prevArrow = document.querySelector('.oversocial_arrow_a.prev');
-            let nextArrow = document.querySelector('.oversocial_arrow_a.next');
-    
-            if (swiper.isBeginning) {
-                prevArrow.classList.add('disabled');
-            } else {
-                prevArrow.classList.remove('disabled');
-            }
-    
-            if (swiper.isEnd) {
-                nextArrow.classList.add('disabled');
-            } else {
-                nextArrow.classList.remove('disabled');
-            }
+            });
         }
-    };
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+            let oversocialSwipers = document.querySelectorAll(".oversocial_Swiper");
+    
+            if (oversocialSwipers.length) {
+                oversocialSwipers.forEach((swiperElement) => {
+                    let swiper = new Swiper(swiperElement, {
+                        slidesPerView: 2.3,
+                        spaceBetween: 20,
+                        breakpoints: {
+                            320: { slidesPerView: 1.1 },
+                            375: { slidesPerView: 1.3 },
+                            425: { slidesPerView: 1.3 },
+                            575: { slidesPerView: 2.8 },
+                            768: { slidesPerView: 3.2 },
+                            1024: { slidesPerView: 3.8 },
+                            1200: { slidesPerView: 3.8 }
+                        },
+                        navigation: {
+                            nextEl: ".oversocial_arrow_a.next",
+                            prevEl: ".oversocial_arrow_a.prev",
+                        },
+                        on: {
+                            init: function () {
+                                setTimeout(() => updateArrowState(this), 100);
+                            },
+                            slideChange: function () {
+                                updateArrowState(this);
+                            }
+                        }
+                    });
+    
+                    function updateArrowState(swiper) {
+                        let prevArrow = document.querySelector(".oversocial_arrow_a.prev");
+                        let nextArrow = document.querySelector(".oversocial_arrow_a.next");
+    
+                        if (prevArrow && nextArrow) {
+                            prevArrow.classList.toggle("disabled", swiper.isBeginning);
+                            nextArrow.classList.toggle("disabled", swiper.isEnd);
+                        }
+                    }
+                });
+            }
+        }, 500); 
+    });
+    

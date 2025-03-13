@@ -5,7 +5,7 @@
     z-index: 999;    
     top: 0;
     left: 0;
-
+    padding: 31px 0;
 }
 
 .headers{
@@ -15,6 +15,7 @@
     z-index: 999;    
     top: 0;
     left: 0;
+    padding: 31px 0;
 }
 
 .headerr{
@@ -24,6 +25,7 @@
     z-index: 999;    
     top: 0;
     left: 0;
+    padding: 31px 0;
 }
 
 .header-inner{
