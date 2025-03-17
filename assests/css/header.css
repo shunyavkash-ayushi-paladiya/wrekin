@@ -28,6 +28,7 @@
     padding: 31px 0;
 }
 
+
 .header-inner{
     display: flex;
     align-items: center;
@@ -104,15 +105,13 @@
    gap: 10px;
 }
 
-.social-icons-img img{
-    width: 257px;
-    height: 54px;
+.social-icons-img svg{
+    width: 25px;
+    height: 25px;
 }
 
-.social-icons-img{
-    background-color: rgba(255, 255, 255, 0.301);
+.social-icons-img-a{
     border-radius: 50px;
-    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;

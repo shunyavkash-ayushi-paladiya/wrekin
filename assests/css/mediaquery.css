@@ -1,3 +1,13 @@
+@media screen and (max-width:1561px){
+    .touch-right-right-img {
+        top: 39%;
+        right: 16%;
+    }
+    .touch-right-img {
+        top: 23%;
+        right: 20%;
+    }
+}
 @media screen and (max-width:1440px){
     .boarding-left-img::before {
         right: -6%;
@@ -26,6 +36,18 @@
     .chapel-right-section::before{
         right: -6%;
         top: 6%;
+    }
+    .touch-tabs{
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+    .touch-right-right-img {
+        top: 39%;
+        right: 16%;
+    }
+    .touch-right-img {
+        top: 23%;
+        right: 20%;
     }
 }
 @media screen and (max-width:1330px){
@@ -133,6 +155,21 @@
     }
     .four-column{
         grid-template-columns: repeat(1,1fr);
+    }
+    .touch-tabs{
+        padding-left: 130px;
+        padding-right: 130px;
+    }
+    .touch-right-right-img{
+        top: 40%;
+        right: 12%;
+    }
+    .touch-right-img{
+        top: 21%;
+        right: 19%;
+    }
+    .terms-cards{
+        grid-template-columns: repeat(2,1fr);
     }
 }
 
@@ -518,7 +555,55 @@
     .form-right-sections {
         width: 100%;
     }
+    .touch-tabs{
+        padding-left: 76px;
+        padding-right: 76px;
+    }
+    .touch-text{
+        font-size: 81px;
+        letter-spacing: -1.62px;
+        line-height: 73px;
+        margin-left: 0;
+        text-align: center;
+    }
+    .touch-para{
+        font-size: 55px;
+        letter-spacing: -1.1px;
+        line-height: 55px;
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 200px;
+    }
+    .touch-right-img{
+        display: none;
+    }
     
+    .touch-right-right-img{
+        display: none;
+    }
+    .touch-inner {
+        padding-top: 163px;
+    }
+    .touch-left-img{
+        left: 40%;
+        top: 100%;
+    }
+    .terms-cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .important-inner{
+        flex-direction: column;
+        align-items: baseline;
+        gap: 20px;
+    }
+    .isaams-inner{
+        flex-direction: column;
+        align-items: baseline;
+        gap: 20px; 
+    }
+    .modal-content{
+       flex-direction: column;
+    }
     }
 
 @media screen and (max-width:610px){
@@ -1192,6 +1277,80 @@
         letter-spacing: -0.4px;
         line-height: 30px;
     }
+    .touch-tabs{
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 21px;
+        letter-spacing: -0.42px;
+    }
+    .terms-cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .terms-card-para{
+        font-size:50px ;
+        letter-spacing:-1px ;
+        line-height:70px ;
+        padding: 34px 30px 50px 30px;
+    }
+    .parents-heading{
+        font-weight: 600;
+        font-size: 40px;
+        letter-spacing: -0.8px;
+        line-height: 80px;
+        white-space: nowrap;
+    }
+    .terms-para{
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 28px;
+        max-width: 300px;
+        color: var(--secondary);
+        display: -webkit-box;
+        -webkit-line-clamp: 9;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .terms-head{
+        font-weight: 600;
+        font-size: 48px;
+        letter-spacing: -0.96px;
+        line-height: 49px;
+    }
+    .important-left-head{
+        font-size: 40px;
+        letter-spacing: -0.8px;
+        line-height: 40px;
+    }
+    .important-inner{
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        padding: 30px;
+        margin-top: 0;
+        border-radius: 0;
+    }
+    .isaams-inner{
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        padding: 30px;
+        border-radius: 0;  
+    }
+    .wedding-head{
+        font-size: 37px;
+        letter-spacing: -0.74px;
+        line-height: 38px;
+    }
+    .wedding-card-img img{
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1;
+      }
+      .wedding{
+        background: linear-gradient(0deg, rgb(255, 254, 254) 94%, rgb(17 112 168) 50%);
+      }
+      .wedding-inner{
+        grid-template-columns: repeat(1,1fr);
+    }  
  }
 
 
