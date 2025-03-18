@@ -6993,3 +6993,30 @@ a.oversocial_arrow_a.next.swiper-button-disabled.swiper-button-lock{
     transition: opacity 0.3s ease;
 }
 
+/* venu hire page css  */
+
+.venu-left-section{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary);
+    padding: 30px;
+    max-height: 600px;
+    width: 100%;
+    position: sticky;
+    top: 200px;
+    max-width: 230px;
+    border-radius: 15px;
+    align-items: baseline;
+    z-index: 2;
+    gap: 10px;
+    color: var(--secondary);
+}
+
+.venu-left-a{
+    color: var(--secondary);
+    opacity: 50%;
+}
+
+.venu-inner{
+    margin-top: 150px;
+}

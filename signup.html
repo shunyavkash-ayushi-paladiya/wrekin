@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<style>
+    body{
+        background-image: url(assests/images/section/360_F_678273704_df1o6zaqYUQ4KzWPP1SeMl8woX0qXueq.jpg);
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .left-form-img img{
+      width: 100%;
+      height: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 15px;
+    }
+    .form-inner{
+        display: flex;
+        gap: 50px;
+        padding-block: 100px;
+        border-radius: 15px;
+        margin-top: 100px;
+        background: linear-gradient(109.6deg, rgba(102, 173, 72, 0.387) 11.2%, rgba(129, 161, 129, 0.21) 91.1%);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        transition: all 0.8s ease;
+        justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px ;
+        flex-wrap: wrap;
+    }
+    .container{
+      max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    }
+    .right-text{
+        font-size: 40px;
+        font-weight: 500;
+        color: white;
+        margin: 0;
+        text-align: center;
+    }
+    .right-a{
+        display: flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        gap: 10px;
+        font-size: 15px;
+        background-color: transparent;
+        border: 2px solid white;
+        padding: 10px;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+    }
+    .right-a:hover {
+        background-color: #326ecd;
+        color: #fff;
+        border: 2px solid #326ecd;
+    }
+    .right-anchor{
+        display: flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        gap: 10px;
+        font-size: 15px;
+        background-color: transparent;
+        border: 2px solid white;
+        padding: 10px;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+    }
+    .right-anchor:hover {
+        background-color: #000;     
+        color: #fff;
+        border: 2px solid #000;
+    }
+    .right-login{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .right-first-row input{
+        width: 100%;
+        border: none;
+        outline: none;
+        border-radius: 15px;
+        margin-top: 10px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        line-height: 31px;
+        padding-block: 15px;
+        padding-left: 10px;
+    }
+    .right-first-row input:focus{
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.381) ;
+        border: 2px solid #000;
+    }
+    .right-first-row input:hover{
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.381) ;
+        border: 2px solid #000;
+    }
+    .right-first-row input::placeholder{
+       font-size: 16px;
+       color: #000;
+    }
+    .right-first-row{
+        margin-top: 25px;
+        text-align: left;
+    }
+    .right-first-row label{
+        color: white;
+        font-size: 16px;
+    }
+    .right-second-row input{
+        width: 100%;
+        border: none;
+        outline: none;
+        border-radius: 15px;
+        margin-top: 10px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        line-height: 31px;
+        padding-block: 15px;
+        padding-left: 10px;
+    }
+    .right-second-row input:focus{
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.381) ;
+        border: 2px solid #000;
+    }
+    .right-second-row input:hover{
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.381) ;
+        border: 2px solid #000;
+    }
+    .right-second-row input::placeholder{
+       font-size: 16px;
+       color: #000;
+    }
+    .right-second-row{
+        margin-top: 25px;
+        text-align: left;
+    }
+    .right-second-row label{
+        color: white;
+        font-size: 16px;
+    }
+    .social-icons{
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+    }
+    .social-menu {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  justify-content: center;
+}
+.social-btn {
+  list-style: none;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  margin: 15px;
+  border-radius: 30%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 10px -5px rgb(255,255,255,0.1);
+  transition: all 0.3s;
+  z-index: 10px;
+}
+.social-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+.social-btn:hover a {
+  color: #fff;
+}
+.social-menu .social-btn::before {
+  content: attr(tooltip);
+  position: absolute;
+  top: 0;
+  font-size: 0.9em;
+  font-weight: bold;
+  z-index: -1;
+  opacity: 0;
+  pointer-events: auto;
+  background: #fff;
+  padding: 10px;
+  color: #000;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-out;
+}
+.social-menu .social-btn::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 0;
+  opacity: 0;
+  background: #fff;
+  transform: rotate(45deg);
+  left: 20%;
+  z-index: -2;
+  transition: 
+    all 0.3s ease-out;
+}
+.social-menu .social-btn:hover::before {
+  top: -45px;
+  opacity: 1;
+}
+.social-btn:hover::after {
+  top: -12px;
+  opacity: 1;
+}
+.facebook a {
+  color: #3b5999;
+}
+.facebook:hover,
+.facebook:hover .social-btn:before,
+.facebook:hover .social-btn:after {
+  background: #3b5999;
+}
+.instagram a {
+  color: #962fbf;
+}
+.instagram:hover,
+.instagram:hover .social-btn:before,
+.instagram:hover .social-btn:after {
+  background: #962fbf;
+}
+.google a {
+  color: #db4437;
+}
+.google:hover,
+.google:hover .social-btn:before,
+.google:hover .social-btn:after {
+  background: #db4437;
+}
+
+.linkedin a {
+  color: #0072b1;
+}
+.linkedin:hover,
+.linkedin:hover .social-btn:before,
+.linkedin:hover .social-btn:after {
+  background: #0072b1;
+}
+ form{
+    text-align: center;
+ }
+ .btn-a{
+  background-color: #fff;
+  border: none;
+    padding: 20px 40px;
+    font-size: 16px;
+    color: green;
+    font-weight: 600;
+    text-decoration:none;
+    display:inline-block;
+    border-radius: 15px;
+    margin-top: 20px;
+    position:relative;
+    z-index:9;
+    overflow:hidden;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-a:before{
+    content:'';
+    width:100%;
+    height:100%;
+    background-color: greenyellow;
+    color: green;
+    position:absolute;
+    top:100%;
+    left:0;
+    font-weight: 600;
+    z-index:-1;
+    transition: 0.4s all;
+}
+.btn-a:hover{
+  color: green;
+  border: 2px solid greenyellow;
+}
+.btn-a:hover:before{
+    top:0;
+}
+@media screen and (max-width:1024px){
+  .form-inner{
+    flex-direction: column;
+  }
+  .right-text{
+    text-align: left;
+  }
+}
+@media screen and (max-width:575px){
+  .right-login{
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .btn-a{
+    margin-top: 30px;
+  }
+  .social-menu{
+    grid-template-columns: repeat(2,1fr);
+    padding-inline-start: 0;
+  }
+}
+@media screen and (max-width:375px){
+  /* .right-first-row input{
+    padding: 20px 15px;
+  }
+  .right-second-row input{
+    padding: 20px 15px;
+  } */
+}
+</style>
+<body>
+    <section class="form">
+        <div class="container">
+            <div class="form-inner">
+                <div class="left-form-img">
+                    <img src="assests/images/section/d4c7c329d020d935a4fea1b4a5c59ea4.jpg" alt="left-form-img">
+                </div>
+                <div class="right-form-img">
+                    <div class="right-logins">
+                      <h4 class="right-text">
+                        Sign Up
+                    </h4>
+                        <div class="right-login">
+                            <a href="#" class="right-a">
+                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-brand-google">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 2a9.96 9.96 0 0 1 6.29 2.226a1 1 0 0 1 .04 1.52l-1.51 1.362a1 1 0 0 1 -1.265 .06a6 6 0 1 0 2.103 6.836l.001 -.004h-3.66a1 1 0 0 1 -.992 -.883l-.007 -.117v-2a1 1 0 0 1 1 -1h6.945a1 1 0 0 1 .994 .89c.04 .367 .061 .737 .061 1.11c0 5.523 -4.477 10 -10 10s-10 -4.477 -10 -10s4.477 -10 10 -10z" />
+                                </svg>
+                                <span>Continue With Google</span>
+                            </a>
+                            <a href="#" class="right-anchor">
+                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-brand-apple">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M15.079 5.999l.239 .012c1.43 .097 3.434 1.013 4.508 2.586a1 1 0 0 1 -.344 1.44c-.05 .028 -.372 .158 -.497 .217a4.15 4.15 0 0 0 -.722 .431c-.614 .461 -.948 1.009 -.942 1.694c.01 .885 .339 1.454 .907 1.846c.208 .143 .436 .253 .666 .33c.126 .043 .426 .116 .444 .122a1 1 0 0 1 .662 .942c0 2.621 -3.04 6.381 -5.286 6.381c-.79 0 -1.272 -.091 -1.983 -.315l-.098 -.031c-.463 -.146 -.702 -.192 -1.133 -.192c-.52 0 -.863 .06 -1.518 .237l-.197 .053c-.575 .153 -.964 .226 -1.5 .248c-2.749 0 -5.285 -5.093 -5.285 -9.072c0 -3.87 1.786 -6.92 5.286 -6.92c.297 0 .598 .045 .909 .128c.403 .107 .774 .26 1.296 .508c.787 .374 .948 .44 1.009 .44h.016c.03 -.003 .128 -.047 1.056 -.457c1.061 -.467 1.864 -.685 2.746 -.616l-.24 -.012z" />
+                                    <path d="M14 1a1 1 0 0 1 1 1a3 3 0 0 1 -3 3a1 1 0 0 1 -1 -1a3 3 0 0 1 3 -3z" />
+                                </svg>
+                                <span>Continue With Apple</span>
+                            </a>
+                        </div>
+                        <form action="">
+                            <div class="right-first-row">
+                            <label for="email">Email</label> <br>
+                            <input  id="email-input"  type="email"  name="email-inputted" placeholder="Enter your email…" required>
+                        </div>  
+                        <div class="right-second-row">
+                            <label for="password">Password</label> <br>
+                            <input type="password" placeholder="Enter your password" required>
+                        </div> 
+                        <button type="submit" class="btn-a">
+                            Submit Form
+                        </button> 
+                        </form>
+                        <div class="social-icons">
+                            <ul class="social-menu">
+                                <li class="social-btn facebook" tooltip="Facebook">
+                                  <a href="#"><ion-icon name="logo-facebook" size="large"></ion-icon></a>
+                                </li>
+                                <li class="social-btn instagram" tooltip="Instagram">
+                                  <a href="#"><ion-icon name="logo-instagram" size="large"></ion-icon></a>
+                                </li>
+                                <li class="social-btn google" tooltip="Google">
+                                    <a href="#"><ion-icon name="logo-google" size="large"></ion-icon></a>
+                                </li>
+                                <li class="social-btn linkedin" tooltip="LinkedIn">
+                                  <a href="#"><ion-icon name="logo-linkedin" size="large"></ion-icon></a>
+                                </li>
+                              </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+
+</body>
+</html>

@@ -775,25 +775,35 @@ if(my_Swiper.length){
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-        const teamCards = document.querySelectorAll(".tabs-card");
         const modal = document.getElementById("teamModal");
         const modalImage = document.getElementById("modalImage");
         const modalName = document.getElementById("modalName");
         const modalRole = document.getElementById("modalRole");
-        const closeModal = document.querySelector(".close");
+        const closeModal = document.querySelector(".close"); // Close button inside modal
         const prevButton = document.getElementById("prevMember");
         const nextButton = document.getElementById("nextMember");
-    
-        let currentIndex = 0;
+        const teamCards = document.querySelectorAll(".tabs-card"); // Ensure correct class
         let members = [];
+        let currentIndex = 0;
     
-        // Store all members in an array
+        // Ensure teamCards exist
+        if (teamCards.length === 0) {
+            console.error();
+            return;
+        }
+    
+        // Populate members array and add click event to each card
         teamCards.forEach((card, index) => {
-            members.push({
-                image: card.getAttribute("data-image"),
-                name: card.getAttribute("data-name"),
-                role: card.getAttribute("data-role"),
-            });
+            const image = card.getAttribute("data-image");
+            const name = card.getAttribute("data-name");
+            const role = card.getAttribute("data-role");
+    
+            if (!image || !name || !role) {
+                console.error(` ${index}`);
+                return;
+            }
+    
+            members.push({ image, name, role });
     
             card.addEventListener("click", function () {
                 currentIndex = index;
@@ -802,6 +812,11 @@ if(my_Swiper.length){
         });
     
         function showModal(index) {
+            if (!members[index]) {
+                console.error(`Invalid index: ${index}`);
+                return;
+            }
+    
             const member = members[index];
             modalImage.src = member.image;
             modalName.textContent = member.name;
@@ -811,41 +826,48 @@ if(my_Swiper.length){
         }
     
         function updateButtonState() {
-           
-            if (currentIndex === 0) {
-                prevButton.style.opacity = "0.5";
-                prevButton.style.pointerEvents = "none"; 
-            } else {
-                prevButton.style.opacity = "1";
-                prevButton.style.pointerEvents = "auto";
+            if (!prevButton || !nextButton) {
+                console.error("Navigation buttons not found.");
+                return;
             }
-
-            if (currentIndex === members.length - 1) {
-                nextButton.style.opacity = "0.5";
-                nextButton.style.pointerEvents = "none";
-            } else {
-                nextButton.style.opacity = "1";
-                nextButton.style.pointerEvents = "auto";
-            }
+    
+            prevButton.style.opacity = currentIndex === 0 ? "0.5" : "1";
+            prevButton.style.pointerEvents = currentIndex === 0 ? "none" : "auto";
+    
+            nextButton.style.opacity = currentIndex === members.length - 1 ? "0.5" : "1";
+            nextButton.style.pointerEvents = currentIndex === members.length - 1 ? "none" : "auto";
         }
     
-        prevButton.addEventListener("click", function () {
-            if (currentIndex > 0) {
-                currentIndex--;
-                showModal(currentIndex);
-            }
-        });
+        // Ensure buttons exist before adding event listeners
+        if (prevButton) {
+            prevButton.addEventListener("click", function () {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    showModal(currentIndex);
+                }
+            });
+        } else {
+            console.error("prevMember button not found.");
+        }
     
-        nextButton.addEventListener("click", function () {
-            if (currentIndex < members.length - 1) {
-                currentIndex++;
-                showModal(currentIndex);
-            }
-        });
+        if (nextButton) {
+            nextButton.addEventListener("click", function () {
+                if (currentIndex < members.length - 1) {
+                    currentIndex++;
+                    showModal(currentIndex);
+                }
+            });
+        } else {
+            console.error("nextMember button not found.");
+        }
     
-        closeModal.addEventListener("click", function () {
-            modal.style.display = "none";
-        });
+        if (closeModal) {
+            closeModal.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+        } else {
+            console.error("Close button not found.");
+        }
     
         window.addEventListener("click", function (event) {
             if (event.target === modal) {
@@ -853,5 +875,4 @@ if(my_Swiper.length){
             }
         });
     });
-    
     
