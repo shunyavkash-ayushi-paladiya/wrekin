@@ -876,3 +876,35 @@ if(my_Swiper.length){
         });
     });
     
+    document.addEventListener("DOMContentLoaded", function () {
+        let swiperElement = document.querySelector(".my_Swipers");
+    
+        if (swiperElement) {
+            var swiper = new Swiper(".my_Swipers", {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: ".memorial-academic-arrow-a.next",
+                    prevEl: ".memorial-academic-arrow-a.prev",
+                },
+                on: {
+                    init: function () {
+                        updateArrowState(this); 
+                    },
+                    slideChange: function () {
+                        updateArrowState(this);
+                    }
+                }
+            });
+    
+            function updateArrowState(swiper) {
+                let prevArrow = document.querySelector(".memorial-academic-arrow-a.prev");
+                let nextArrow = document.querySelector(".memorial-academic-arrow-a.next");
+    
+                if (prevArrow && nextArrow) {
+                    prevArrow.classList.toggle("disabled", swiper.isBeginning);
+                    nextArrow.classList.toggle("disabled", swiper.isEnd);
+                }
+            }
+        }
+    });

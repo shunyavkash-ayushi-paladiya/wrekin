@@ -1799,12 +1799,6 @@ section.slidetypes{
     padding: 10px;
 }
 
-.swiper-academic-image{
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-}
-
 .swipers-academic-arrow-a {
     background-color: var(--forth);
     border-radius: 10px;
@@ -1820,6 +1814,12 @@ section.slidetypes{
 .swipers-academic-arrow-a.disabled {
     opacity: 0.5 ;
     pointer-events: none;
+}
+
+.swiper-academic-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
 }
 
 /* .swiper {
@@ -7000,7 +7000,7 @@ a.oversocial_arrow_a.next.swiper-button-disabled.swiper-button-lock{
     flex-direction: column;
     background-color: var(--primary);
     padding: 30px;
-    max-height: 600px;
+    max-height: 250px;
     width: 100%;
     position: sticky;
     top: 200px;
@@ -7019,4 +7019,95 @@ a.oversocial_arrow_a.next.swiper-button-disabled.swiper-button-lock{
 
 .venu-inner{
     margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.venu-right-section{
+    width: calc(100% - 300px);
+    margin-top: 50px;
+}
+
+.memorial-text{
+    font-size: 50px;
+    font-weight: 500;
+    color: var(--forth);
+    letter-spacing: -1px;
+    line-height: 70px;
+}
+
+.memorial-text strong{
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.memorial{
+    margin-top: 30px;
+}
+
+.memorial-para{
+    max-width: 780px;
+    margin-top: 20px;
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.memorial-paras{
+    max-width: 780px;
+    margin-top: 10px;
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.memorial-a{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+    background-color: var(--forth);
+    transition: all 0.3s ease;
+    padding: 20px 40px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    border: 2px solid var(--forth);
+}
+
+.memorial-a:hover{
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.memorial-academic-arrows {
+    position: absolute;
+    display: flex;
+    right: 0%;
+    bottom: 0%;
+    transform: translate(0% , 0%);
+    align-items: center;
+    justify-content: center;    
+    gap: 10px;
+    z-index: 10;
+    padding: 10px;
+}
+
+.memorial-academic-arrow-a {
+    background-color: var(--forth);
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+}
+
+.memorial-academic-arrow-a.disabled {
+    opacity: 0.5 ;
+    pointer-events: none;
 }
