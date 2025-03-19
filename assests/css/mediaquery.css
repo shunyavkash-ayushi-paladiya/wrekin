@@ -603,6 +603,73 @@
     }
     .modal-content{
        flex-direction: column;
+       margin: 0 auto;
+       width: 50%;
+    }
+    .venu-inner{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .venu-left-section{
+        flex-direction: row;
+        overflow: auto;
+        max-height: 100%;
+        max-width: none;
+        gap: 20px;
+        padding: 25px;
+        align-items: center;
+        padding-inline: 20px;
+        width: calc(100% + 40px);
+        border-radius: 0;
+        position: static;
+    }
+    .venu-right-section{
+        width: calc(100% - 0px);
+    }
+    .catering-inner{
+        flex-direction: column;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .memorial-paras{
+        display: none;
+    }
+    .memorial-text{
+        color: var(--primary);
+    }
+    .catering-head{
+        max-width: 220px;
+        font-size: 37px;
+        letter-spacing: -0.74px;
+        line-height: 38px;
+    }
+    .catering-img img{
+        aspect-ratio: 1;
+    }
+    .catering{
+        background: linear-gradient(0deg, rgb(0 42 77) 16%, rgba(165, 206, 192, 0) 7%);
+    }
+    .tabs-content{
+        scroll-margin-top: 100px;
+    }
+    .reports{
+        width: 100%;
+    }
+    .modals{
+        padding-left: 0;
+        padding-right: 0;
+        z-index: 999;
+    }
+    .close{
+        top: 35px;
+        right: 35px;
+    }
+    .modal-contents{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     }
 
@@ -1351,6 +1418,29 @@
       .wedding-inner{
         grid-template-columns: repeat(1,1fr);
     }  
+    .modal-first-row{
+        flex-direction: column;
+        gap: 0;
+    }
+    .modal-content{
+        width: 100%;
+     }
+     .modal{
+        z-index: 999;
+     }
+     .support-info{
+        font-size: 41px;
+        letter-spacing: -0.82px;
+        line-height: 51px;
+     }
+     .reports{
+        padding-left: 20px;
+        padding-right: 20px;
+     }
+     .search-img img{
+        object-fit: cover;
+        border-radius: 15px;
+     }
  }
 
 

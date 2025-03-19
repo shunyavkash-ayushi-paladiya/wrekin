@@ -1,63 +1,3 @@
-document.getElementById("menu-btn").addEventListener("click", function() {
-    document.getElementById("menu-overlay").classList.add("active");
-});
-
-document.getElementById("close-btn").addEventListener("click", function() {
-    document.getElementById("menu-overlay").classList.remove("active");
-});
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const menuBtn = document.getElementById("menu-btn");
-    const closeBtn = document.getElementById("close-btn");
-    const menuOverlay = document.getElementById("menu-overlay");
-    const menuItems = document.querySelectorAll(".menulist-a");
-    const submenu = document.getElementById("submenu");
-
-    const submenus = {
-        wrekin: {
-            items: ["Homepage", "Admissions", "International Admissions", "Academic", "Wrekin Life", "Year 7-8", "Sixth Form", "Co-Curricular", "About Us", "News & Events"],
-            color: "#002A4D"
-        },
-        oldhall: {
-            items: ["Homepage", "Admissions", "Old Hall Life", "Academic", "Our Community", "News & Events", "Policies", "Get in touch"],
-            color: "#7A2534"
-        },
-    };
-
-    menuBtn.addEventListener("click", function () {
-        menuOverlay.classList.add("active");
-        menuOverlay.style.backgroundColor = "#4B4F61"; 
-    });
-
-    closeBtn.addEventListener("click", function () {
-        menuOverlay.classList.remove("active");
-    });
-
-    menuItems.forEach((item) => {
-        item.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            menuItems.forEach((menu) => menu.classList.remove("active"));
-            this.classList.add("active");
-
-            const selectedMenu = this.getAttribute("data-menu");
-            const submenuData = submenus[selectedMenu];
-
-            if (submenuData) {
-                submenu.innerHTML = submenuData.items.map(item => `<li>${item}</li>`).join("");
-                submenu.classList.add("active");
-
-                menuOverlay.style.backgroundColor = submenuData.color;
-            } else {
-                submenu.classList.remove("active");
-                menuOverlay.style.backgroundColor = "#4B4F61"; 
-            }
-        });
-    });
-});
-
 
 document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.getElementById("menu-btn");
@@ -67,36 +7,47 @@ document.addEventListener("DOMContentLoaded", function () {
     const submenu = document.getElementById("submenu");
     const menuList = document.querySelector(".menu-list");
 
-    
     const submenus = {
         wrekin: {
-            items: ["Homepage", "Admissions", "International Admissions", "Academic", "Wrekin Life", "Year 7-8", "Sixth Form", "Co-Curricular"],
+            items: [
+                { name: "Homepage", link: "index.html" },
+                { name: "Admissions", link: "admissionpages.html" },
+                { name: "International Admissions", link: "internationaladmissions.html" },
+                { name: "Academic", link: "academic.html" },
+                { name: "Wrekin Life", link: "wrekinlife.html" },
+                { name: "Year 7-8", link: "wrekinyear7-8.html" },
+                { name: "Sixth Form", link: "wrekinsixthform.html" },
+                { name: "Co-Curricular", link: "wrekincocurricular.html" }
+            ],
             color: "#002A4D"
         },
         oldhall: {
-            items: ["Homepage", "Admissions", "Old Hall Life", "Academic", "Our Community", "News & Events", "Policies", "Get in touch"],
+            items: [
+                { name: "Homepage", link: "index.html" },
+                { name: "Admissions", link: "admissionpages.html" },
+                { name: "Old Hall Life", link: "wrekinsixthform.html" },
+                { name: "Academic", link: "academic.html" },
+                { name: "Our Community", link: "wrekinourcommunity.html" },
+                { name: "News & Events", link: "wrekinews.html" },
+                { name: "Policies", link: "wrekininternational.html" },
+                { name: "Get in touch", link: "contact.html" }
+            ],
             color: "#7A2534"
         },
     };
 
-   
-    menuOverlay.style.backgroundColor = "#4B4F61"; 
-
-    
     menuBtn.addEventListener("click", function () {
         menuOverlay.classList.add("active");
-        menuOverlay.style.backgroundColor = "#4B4F61"; 
+        menuOverlay.style.backgroundColor = "#4B4F61";
     });
 
-    
     closeBtn.addEventListener("click", function () {
         menuOverlay.classList.remove("active");
-        submenu.classList.remove("active"); 
-        menuList.classList.remove("hidden"); 
-        menuOverlay.style.backgroundColor = "#4B4F61"; 
+        submenu.classList.remove("active");
+        menuList.classList.remove("hidden");
+        menuOverlay.style.backgroundColor = "#4B4F61";
     });
 
-   
     menuItems.forEach((item) => {
         item.addEventListener("click", function (e) {
             e.preventDefault();
@@ -108,11 +59,15 @@ document.addEventListener("DOMContentLoaded", function () {
             const submenuData = submenus[selectedMenu];
 
             if (submenuData) {
-                submenu.innerHTML = submenuData.items.map(item => `<li>${item}</li>`).join("");
+                submenu.innerHTML = submenuData.items
+                    .map(item => `<li><a href="${item.link}">${item.name}</a></li>`)
+                    .join("");
+
                 submenu.classList.add("active");
                 menuList.classList.add("hidden");
 
                 menuOverlay.style.backgroundColor = submenuData.color;
+
                 if (!submenu.querySelector(".back-btn")) {
                     let backBtn = document.createElement("button");
                     backBtn.innerHTML = "← Back";
@@ -120,13 +75,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     backBtn.onclick = function () {
                         submenu.classList.remove("active");
                         menuList.classList.remove("hidden");
-                        menuOverlay.style.backgroundColor = "#4B4F61"; 
+                        menuOverlay.style.backgroundColor = "#4B4F61";
                     };
                     submenu.prepend(backBtn);
                 }
             } else {
                 submenu.classList.remove("active");
-                menuOverlay.style.backgroundColor = "#4B4F61"; 
+                menuOverlay.style.backgroundColor = "#4B4F61";
             }
         });
     });
@@ -143,6 +98,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
 
 window.addEventListener("scroll", function () {
     let headers = document.querySelectorAll(".header, .headers, .headerr");
@@ -779,7 +736,7 @@ if(my_Swiper.length){
         const modalImage = document.getElementById("modalImage");
         const modalName = document.getElementById("modalName");
         const modalRole = document.getElementById("modalRole");
-        const closeModal = document.querySelector(".close"); // Close button inside modal
+        const closeModal = document.querySelector(".closes"); // Close button inside modal
         const prevButton = document.getElementById("prevMember");
         const nextButton = document.getElementById("nextMember");
         const teamCards = document.querySelectorAll(".tabs-card"); // Ensure correct class
@@ -907,4 +864,95 @@ if(my_Swiper.length){
                 }
             }
         }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll(".venu-left-a");
+    
+        links.forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+    
+                const targetId = this.getAttribute("href").substring(1);
+                const targetSection = document.getElementById(targetId);
+    
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    
+                    document.querySelectorAll(".venu-left-a").forEach(anchor => {
+                        anchor.classList.remove("active-link");
+                    });
+    
+                    this.classList.add("active-link");
+                }
+            });
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // Open and close the first modal
+        const openModalBtn = document.getElementById('openModal');
+        const myModal = document.getElementById('myModal');
+        const closeModalBtn = myModal?.querySelector('.close'); 
+    
+        if (openModalBtn && myModal && closeModalBtn) {
+            openModalBtn.addEventListener('click', function() {
+                myModal.style.display = 'flex';
+            });
+            closeModalBtn.addEventListener('click', function() {
+                myModal.style.display = 'none';
+            });
+        }
+    
+        // Open and close the second modal (fixed incorrect ID)
+        const openReportsBtn = document.getElementById('openModals');
+        const reportModal = document.getElementById('report-modals'); 
+        const closeReportsBtn = reportModal?.querySelector('.close-icon'); 
+    
+        if (openReportsBtn && reportModal && closeReportsBtn) {
+            openReportsBtn.addEventListener('click', function() {
+                reportModal.style.display = 'flex';
+            });
+            closeReportsBtn.addEventListener('click', function() {
+                reportModal.style.display = 'none';
+            });
+        }
+
+        const openModalButton = document.getElementById('opensmodels'); // Renamed variable
+        const reportPopup = document.getElementById('moreinfo'); // Renamed variable
+        const closeModalButton = reportPopup?.querySelector('.close-icons'); // Renamed variable
+
+        if (openModalButton && reportPopup && closeModalButton) {
+        openModalButton.addEventListener('click', function() {
+        reportPopup.style.display = 'flex';
+       });
+        closeModalButton.addEventListener('click', function() {
+        reportPopup.style.display = 'none';
+      });
+
+        }
+
+    });
+
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+            const loader = document.querySelector(".loader");
+            const leftImage = document.querySelector(".loader-left-img");
+            const rightImage = document.querySelector(".loader-right-img");
+
+            if (leftImage && rightImage) {
+                leftImage.style.transform = "translateX(-100vw)";
+                rightImage.style.transform = "translateX(100vw)";
+            }
+
+            if (loader) {
+                setTimeout(() => {
+                    loader.style.opacity = "0";
+                    setTimeout(() => {
+                        loader.style.display = "none";
+                    }, 500);
+                }, 500); 
+            }
+        }, 3000);
     });
