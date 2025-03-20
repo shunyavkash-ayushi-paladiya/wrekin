@@ -123,9 +123,9 @@ window.addEventListener("scroll", function () {
                 header.style.padding = "31px 0";
 
                 if (header.classList.contains("header")) {
-                    header.style.backgroundColor = "#002A4D";
+                    header.style.backgroundColor = "transparent";
                 } else if (header.classList.contains("headers")) {
-                    header.style.backgroundColor = "white";
+                    header.style.backgroundColor = "transparent";
                 } else if (header.classList.contains("headerr")) {
                     header.style.backgroundColor = "transparent";
                 }
@@ -779,6 +779,7 @@ if(my_Swiper.length){
             modalName.textContent = member.name;
             modalRole.textContent = member.role;
             modal.style.display = "flex";
+            $("body").css('overflow', "hidden");
             updateButtonState();
         }
     
@@ -821,6 +822,7 @@ if(my_Swiper.length){
         if (closeModal) {
             closeModal.addEventListener("click", function () {
                 modal.style.display = "none";
+                $("body").css('overflow', "auto");
             });
         } else {
             console.error("Close button not found.");
@@ -890,7 +892,7 @@ if(my_Swiper.length){
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-        // Open and close the first modal
+       
         const openModalBtn = document.getElementById('openModal');
         const myModal = document.getElementById('myModal');
         const closeModalBtn = myModal?.querySelector('.close'); 
@@ -898,13 +900,15 @@ if(my_Swiper.length){
         if (openModalBtn && myModal && closeModalBtn) {
             openModalBtn.addEventListener('click', function() {
                 myModal.style.display = 'flex';
+                $("body").css('overflow', "hidden");
             });
             closeModalBtn.addEventListener('click', function() {
                 myModal.style.display = 'none';
+                $("body").css('overflow', "auto");
             });
         }
     
-        // Open and close the second modal (fixed incorrect ID)
+        
         const openReportsBtn = document.getElementById('openModals');
         const reportModal = document.getElementById('report-modals'); 
         const closeReportsBtn = reportModal?.querySelector('.close-icon'); 
@@ -912,47 +916,34 @@ if(my_Swiper.length){
         if (openReportsBtn && reportModal && closeReportsBtn) {
             openReportsBtn.addEventListener('click', function() {
                 reportModal.style.display = 'flex';
+                $("body").css('overflow', "hidden");
             });
             closeReportsBtn.addEventListener('click', function() {
                 reportModal.style.display = 'none';
+                $("body").css('overflow', "auto");
             });
         }
 
-        const openModalButton = document.getElementById('opensmodels'); // Renamed variable
-        const reportPopup = document.getElementById('moreinfo'); // Renamed variable
-        const closeModalButton = reportPopup?.querySelector('.close-icons'); // Renamed variable
+        const openModalButton = document.getElementById('opensmodels'); 
+        const reportPopup = document.getElementById('moreinfo'); 
+        const closeModalButton = reportPopup?.querySelector('.close-icons'); 
 
         if (openModalButton && reportPopup && closeModalButton) {
         openModalButton.addEventListener('click', function() {
         reportPopup.style.display = 'flex';
+        $("body").css('overflow', "hidden");
        });
         closeModalButton.addEventListener('click', function() {
         reportPopup.style.display = 'none';
+        $("body").css('overflow', "auto");
       });
 
         }
 
     });
 
-    
-    document.addEventListener("DOMContentLoaded", function () {
-        setTimeout(() => {
-            const loader = document.querySelector(".loader");
-            const leftImage = document.querySelector(".loader-left-img");
-            const rightImage = document.querySelector(".loader-right-img");
-
-            if (leftImage && rightImage) {
-                leftImage.style.transform = "translateX(-100vw)";
-                rightImage.style.transform = "translateX(100vw)";
-            }
-
-            if (loader) {
-                setTimeout(() => {
-                    loader.style.opacity = "0";
-                    setTimeout(() => {
-                        loader.style.display = "none";
-                    }, 500);
-                }, 500); 
-            }
-        }, 3000);
-    });
+    setTimeout(() => {
+        document.body.classList.remove("loader-active");
+      }, 3000); 
+      
+      

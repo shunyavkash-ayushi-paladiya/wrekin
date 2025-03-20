@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary : #000;
+    --secondary:#FEC74F;
+    --ternory:rgb(254 199 79);
+    --forth:rgb(255 255 255);
+    --fifth:rgba(64,64,64);
+    --sixth:rgb(240 224 206);
+    --seventh:#338FFF;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Marcellus SC", serif;
+    scroll-behavior: smooth;
+} 
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: currentColor;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
+
+img{
+    display: block;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* header section  */

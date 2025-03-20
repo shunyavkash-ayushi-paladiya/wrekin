@@ -671,7 +671,10 @@
         align-items: center;
         justify-content: center;
     }
+    .loader-inner {
+        grid-template-columns: repeat(1, 1fr);
     }
+}
 
 @media screen and (max-width:610px){
     .sixth-form-inner{
