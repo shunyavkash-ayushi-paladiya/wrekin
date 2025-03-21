@@ -181,16 +181,12 @@ document.addEventListener("DOMContentLoaded", function () {
 let mySwiper = document.querySelectorAll(".mySwiper");
 if(mySwiper.length){
 var swiper = new Swiper(".mySwiper", {
-    pagination: {
-    //   el: ".swiper-pagination",
-    //   dynamicBullets: true,
-    loop: true, 
-    },
     slidesPerView: 1,
-    spaceBetween: 10, 
+    loop:true,
+    spaceBetween: 30,
     autoplay:{
     delay:2000,
-    },
+    }
   });
 }
   
@@ -365,6 +361,7 @@ if(mySwiperss.length){
     var swiper = new Swiper('.mySwiperss', {
         slidesPerView: 2.3,
         spaceBetween: 10,
+        loop:true,
         breakpoints: {
             320: { 
                 slidesPerView: 1.3,
