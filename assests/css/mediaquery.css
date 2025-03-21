@@ -251,7 +251,7 @@
         max-width: 248px;
     }
     .hero-section-right-box{
-        transform: translateY(40%);
+       margin-top: 150px;
     }
     .hero-inner{
         justify-content: center;
@@ -260,7 +260,7 @@
     .hero-section-bg-img{
         width: calc(100% + 40px);
         margin-left: -20px;
-        margin-top: -347px;
+        margin-top: -502px;
     }
     .text-section{
         margin-top: 200px;
@@ -722,11 +722,8 @@
     .menu-text{
         display: none;
     }
-    .hero-section-right-box {
-        transform: translateY(15%);
-    }
     .text-section{
-        margin-top: 300px;
+        margin-top: 323px;
     }
     .text-section-head{
         font-size: 58px;
@@ -1456,6 +1453,12 @@
      }
      .column{
         background: linear-gradient(0deg, rgb(255, 254, 254) 90%, rgb(240 244 243) 50%); 
+     }
+     .hero-section-right-box{
+        margin-top: 50px;
+     }
+     .hero-section-bg-img{
+        margin-top: -400px;
      }
  }
 
