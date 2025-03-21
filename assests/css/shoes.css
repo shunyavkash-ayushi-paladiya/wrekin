@@ -16,7 +16,6 @@
 
 body {
     font-size: 16px;
-    font-family: "Marcellus SC", serif;
     scroll-behavior: smooth;
 } 
 
@@ -43,3 +42,85 @@ img{
 }
 
 /* header section  */
+
+.header-head{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    z-index: 999;    
+    top: 0;
+    left: 0;
+    padding: 31px 0;
+    background-color: var(--forth);
+}
+
+.dakstop-icon svg{
+    width: 40px;
+    height: 40px;
+}
+
+.mobile-icon svg{
+    width: 40px;
+    height: 40px;
+}
+
+.header-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-right-section{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-left-section{
+    display: flex;
+    align-items: center;
+    gap: 550px;
+}
+
+.header-left-icons{
+    display: flex;
+    gap: 20px;
+}
+
+.header-right-para{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--fifth);
+}  
+
+.header-right-a{
+    font-size: 16px;
+    border-bottom: 1px solid var(--fifth);
+    color: var(--fifth);
+    transition: all 0.3s ease;
+}
+
+.header-right-a:hover{
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary);
+}
+
+.header-right-anchor{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--forth);
+    background-color: #206dca;
+    padding: 13px;
+    border-radius: 20px;
+    border: 2px solid #206dca;
+    transition: all 0.3s ease;
+}
+
+.header-right-anchor:hover{
+    background-color: var(--seventh);
+    border: 2px solid var(--seventh);
+}

@@ -185,35 +185,11 @@ var swiper = new Swiper(".mySwiper", {
     //   el: ".swiper-pagination",
     //   dynamicBullets: true,
     loop: true, 
-    centeredSlides: true,
     },
-    slidesPerView: 2.5,
+    slidesPerView: 1,
     spaceBetween: 10, 
     autoplay:{
     delay:2000,
-    },
-    breakpoints: {
-        320: { 
-            slidesPerView: 1,
-        },
-        375: { 
-            slidesPerView: 1,
-        },
-        425: { 
-            slidesPerView: 1,
-        },
-        575: { 
-            slidesPerView: 1,
-        },
-        768: { 
-            slidesPerView: 2.5,
-        },
-        1024: { 
-            slidesPerView: 2.5,
-        },
-        1200: { 
-            slidesPerView: 2.5,
-        }
     },
   });
 }

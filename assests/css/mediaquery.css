@@ -674,6 +674,15 @@
     .loader-inner {
         grid-template-columns: repeat(1, 1fr);
     }
+    .loader-left-img, .loader-right-img
+    {
+        width: 100%;
+        height: 50vh;
+    }
+    .close-icons{
+        background-color: transparent;
+        color: var(--primary);
+    }
 }
 
 @media screen and (max-width:610px){
@@ -1035,6 +1044,7 @@
     }
     .column-inner{
         flex-direction: column;
+        margin-top: 0;
     }
     .exchange-text{
         flex-direction: column;
@@ -1189,8 +1199,8 @@
         font-size: 50px;
         letter-spacing: -1px;
     }
-    .report{
-        margin-top: -700px;
+    .slidetypers{
+        margin-top: 100px;
     }
     .reports{
         margin-top: 0;
@@ -1443,6 +1453,9 @@
      .search-img img{
         object-fit: cover;
         border-radius: 15px;
+     }
+     .column{
+        background: linear-gradient(0deg, rgb(255, 254, 254) 90%, rgb(240 244 243) 50%); 
      }
  }
 
