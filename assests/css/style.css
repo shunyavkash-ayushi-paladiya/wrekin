@@ -575,7 +575,7 @@ img{
 }
 
 .sliders-section{
-    margin-top: -160px;
+    margin-top: -60px;
 }
 
 .swiper_heading_text{
@@ -1681,7 +1681,6 @@ section.slidetypes{
     max-height: 600px;
     width: 100%;
     position: sticky;
-    overflow-y: auto;
     top: 130px;
     max-width: 300px;
     box-shadow: 0px 3px 36px #00000017;
@@ -1703,6 +1702,7 @@ section.slidetypes{
     letter-spacing: -0.14px;
     line-height: 34px;
     font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .academic-left-anchor{
@@ -2209,9 +2209,9 @@ section.slidetypes{
 }
 
 .four-column-a:hover{
-    background-color: transparent;
+    background-color: var(--secondary);
     color: var(--forth);
-    border: 2px solid var(--forth);
+    border: 2px solid var(--secondary);
 }
 
 /* admissionages page css  */
@@ -2312,7 +2312,7 @@ section.slidetypes{
 
 .admissions img{
     width: 100%;
-    height: 100%;
+    height: 1000px;
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -3324,10 +3324,12 @@ color: var(--forth);
 
  .column-left-img{
     position: relative;
+    cursor: pointer;
  }
 
  .column-right-img{
     position: relative;
+    cursor: pointer;
  }
 
  .column-left-text{
@@ -3790,9 +3792,9 @@ color: var(--forth);
  }
 
  .art-a:hover{
-    border: 2px solid var(--forth);
+    border: 2px solid var(--secondary);
     color: var(--forth);
-    background-color: transparent;
+    background-color:var(--secondary);
  }
 
  .art-right-img{
@@ -3831,7 +3833,7 @@ color: var(--forth);
 .theteam img{
     width: 100%;
     object-fit: cover;
-    height: 100%;
+    height: 1000px;
     position: absolute;
     top: 0;
     left: 0;
@@ -4418,7 +4420,7 @@ s{
 
 .internationals img{
     width: 100%;
-    height: 100%;
+    height: 1000px;
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -4563,6 +4565,7 @@ s{
 
 .ways-left-section-img{
     position: relative;
+    cursor: pointer;
 }
 
 .ways-left-section-img:hover .ways-left-text1{
@@ -5229,6 +5232,7 @@ border-radius: 15px;
     justify-content:center;
     gap: 20px;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .checkbox-section input[type="checkbox"] {
@@ -5267,6 +5271,7 @@ border-radius: 15px;
     font-weight: 100;
     line-height: 21px;
     max-width: 225px;
+    cursor: pointer;
 }
 
 .submit-button{
@@ -6142,13 +6147,17 @@ a.oversocial_arrow_a.next.swiper-button-disabled.swiper-button-lock{
   }
 
   .insights-left-section{
-    display: flex;
+   display: flex;
     flex-direction: column;
-    gap: 15px;
     padding: 30px;
-    height: 300px;
-    width: 25%;
-    position: static;
+    max-height: 600px;
+    width: 100%;
+    position: sticky;
+    top: 60px;
+    max-width: 300px;
+    border-radius: 15px;
+    align-items: baseline;
+    z-index: 2;
   }
 
   .insights-inner{
@@ -6296,6 +6305,7 @@ a.oversocial_arrow_a.next.swiper-button-disabled.swiper-button-lock{
     font-weight: 100;
     line-height: 21px;
     max-width: 350px;
+    cursor: pointer;
 }
 
 .first-rows select{
@@ -6966,8 +6976,9 @@ a.oversocial_arrow_a.next.swiper-button-disabled.swiper-button-lock{
 }
 
 .wedding-a:hover{
-    background-color: transparent;
+    background-color: var(--secondary);
     color: var(--forth);
+    border: 2px solid var(--secondary);
 }
 
 .wedding-card-img{
@@ -7015,13 +7026,12 @@ a.oversocial_arrow_a.next.swiper-button-disabled.swiper-button-lock{
     gap: 10px;
     color: var(--secondary);
     white-space: nowrap;
-    overflow-y: auto;   
-    overflow-x: hidden;
 }
 
 .venu-left-a{
     color: var(--secondary);
     opacity: 50%;
+    transition: all 0.3s ease;
 }
 
 .venu-inner{
@@ -7419,11 +7429,11 @@ a.oversocial_arrow_a.next.swiper-button-disabled.swiper-button-lock{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: transparent;
     overflow: hidden;
     transition: all 0.5s ease, visibility 0.5s ease;
-    z-index: 4;
+    z-index: 20;
 }
 
 .loader-inner{
@@ -7442,13 +7452,13 @@ a.oversocial_arrow_a.next.swiper-button-disabled.swiper-button-lock{
 
 .loader-left-img img{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
 }
 
 .loader-right-img img{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
 }
 
@@ -7459,12 +7469,17 @@ a.oversocial_arrow_a.next.swiper-button-disabled.swiper-button-lock{
     top: 0%;
     background-color:#002A4D;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-repeat: no-repeat;
     object-fit: contain;
     z-index: 1;
     transition: all 0.3s ease;
     opacity: 40%;
+}
+
+.loader-left-inner-img img{
+    width: 100%;
+    height: 100%;
 }
 
 .loader-left-img::after{
@@ -7474,7 +7489,7 @@ a.oversocial_arrow_a.next.swiper-button-disabled.swiper-button-lock{
     top: 0%;
     background-color:#58132F ;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-repeat: no-repeat;
     object-fit: contain;
     z-index: 1;
@@ -7550,4 +7565,13 @@ a.oversocial_arrow_a.next.swiper-button-disabled.swiper-button-lock{
     line-height:65px ;
     color: var(--secondary);
     margin-left: 30px;
+}
+
+.admission-1 img{
+    width: 100%;
+    height: 803px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }

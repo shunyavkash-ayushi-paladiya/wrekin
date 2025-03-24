@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shoes</title>
     <link rel="stylesheet" href="assests/css/shoes.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Marcellus+SC&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playball&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+SA:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -408,7 +409,7 @@
             <div class="container">
                 <div class="banner-inner">
                     <div class="banner-text">
-                        <h4 class="banner-head">
+                        <h4 class="banner-heads">
                             20% Off Kids Styles
                         </h4>
                         <p class="banner-para">
@@ -662,8 +663,117 @@
     <!-- commited section  -->
 
     <section class="commited">
-        
+        <div class="container">
+            <div class="commited-inner">
+                <div class="banner-text">
+                    <h4 class="commited-head" >
+                        <span>Committed</span>to Sustainability
+                     </h4>
+                    <div class="banners-shoes">
+                    <div class="commited-shoes">
+                        <div class="commited-shoes-img">
+                            <h4 class="commited-heading">
+                               WALK WITH US TOWARDS A GREENER PLANET, ONE STEP AT A TIME 
+                            </h4>
+                            <p class="commited-para">
+                                I'm a paragraph. Click here to add your own text and edit me. It’s easy.
+                                Just click “Edit Text” or double click me to add your own content and make
+                                changes to the font. I’m a great place for you to tell a story and let your
+                                users know a little more about you.
+                            </p>
+                            <a href="#" class="commited-a">
+                                READ MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- customer section  -->
+
+    <section class="customer">
+        <div class="container">
+            <div class="customer-inner">
+                <h4 class="customer-head">
+                    CUSTOMER REVIEWS
+                </h4>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="customer-slide-texts">
+                         <h4 class="customer-slide-text">  
+                           “A MUST-HAVE FOR EVERY ATHLETE"
+                         </h4>
+                         <p class="customer-slide-para">
+                            “I'm a review. Click to edit me and add text from a critic who has evaluated you and your work.”
+                         </p>
+                         <h5 class="customer-name">
+                            NAME
+                         </h5>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="customer-slides-texts">
+                            <h4 class="customer-slides-text">
+                              “ECO-FRIENDLY AND DURABLE”
+                            </h4>
+                            <p class="customer-slides-para">
+                                “I'm a review. Click to edit me and add text that says something nice about you and your work. Share a bit of critical acclaim and spur some excitement for your latest project.”
+                            </p>
+                            <h5 class="customers-name">
+                               NAME
+                            </h5>
+                           </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="customer-slide-texts">
+                            <h4 class="customer-slide-text">  
+                              “A MUST-HAVE FOR EVERY ATHLETE"
+                            </h4>
+                            <p class="customer-slide-para">
+                               “I'm a review. Click to edit me and add text from a critic who has evaluated you and your work.”
+                            </p>
+                            <h5 class="customer-name">
+                               NAME
+                            </h5>
+                           </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="customer-slides-texts">
+                            <h4 class="customer-slides-text">
+                              “ECO-FRIENDLY AND DURABLE”
+                            </h4>
+                            <p class="customer-slides-para">
+                                “I'm a review. Click to edit me and add text that says something nice about you and your work. Share a bit of critical acclaim and spur some excitement for your latest project.”
+                            </p>
+                            <h5 class="customers-name">
+                               NAME
+                            </h5>
+                           </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        loop:true,
+        spaceBetween: 15,
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    </script>
 </body>
 </html>
