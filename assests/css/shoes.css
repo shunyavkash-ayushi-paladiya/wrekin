@@ -346,6 +346,7 @@ img{
     border-radius: 30px;
     transition: all 0.3s ease;
     padding: 10px 25px;
+    white-space: nowrap;
   }
 
   .banner-bottom-a:hover{
