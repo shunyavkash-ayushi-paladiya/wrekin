@@ -59,14 +59,24 @@ img{
     background-color: var(--forth);
 }
 
-.dakstop-icon svg{
+.dekstopicon svg{
     width: 40px;
     height: 40px;
+    transition: all 0.3s ease;
 }
 
-.mobile-icon svg{
+.dekstopicon:active svg{
+  color: var(--seventh);
+}
+
+.mobileicon svg{
     width: 40px;
     height: 40px;
+    transition: all 0.3s ease;
+}
+
+.mobileicon:active svg{
+  color: var(--seventh);
 }
 
 .header-inner{
@@ -115,8 +125,8 @@ img{
     font-weight: 500;
     color: var(--forth);
     background-color: #206dca;
-    padding: 13px;
-    border-radius: 20px;
+    padding: 8px;
+    border-radius: 30px;
     border: 2px solid #206dca;
     transition: all 0.3s ease;
 }
@@ -786,6 +796,9 @@ footer {
 .footer-section ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .footer-section ul li a {
   color: var(--primary);
@@ -800,6 +813,10 @@ footer {
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
+  font-size: 14px;
+}
+
+.footer-para{
   font-size: 14px;
 }
 
@@ -823,10 +840,9 @@ footer {
 } 
 
 .responsive{
-  margin: 100px auto;
+  margin: 150px 750px;
   max-width: 40%;
   position: relative;
-  border-top-left-radius: 15px;
 }
 
 .responsive::after, .responsive::before{
@@ -841,20 +857,22 @@ footer {
 .responsive::before{
   border-radius: 46px 46px 0 0;
   margin-bottom: -3px;
+  max-width: 320px;
 }
 
 .responsive::after{
   border-radius: 0 0 46px 46px;
   margin-top: -3px;
+  max-width: 320px;
 }
 
 .responsive-inner{
   background-color: #eff1f2;
     border-radius: 1.5px;
     height: 3px;
-    left: 50%;
+    left: 40%;
     position: absolute;
-    top: 23px;
+    top: 32px;
     transform: translateX(-50%) translateY(-50%);
     width: 24px;  
 }
@@ -870,9 +888,6 @@ footer {
 @media screen and (max-width:320px){
    .marquee{
      margin-top: 0;
-   }
-   .responsive::after{
-    max-width: 56%;
    }
    .banner-head{
     font-size: 30px;
@@ -906,7 +921,7 @@ footer {
     grid-template-columns: repeat(1,1fr);
    }
    .banner-shoes-img{
-    max-width: 200px;
+    max-width: 270px;
    }
    .seller-inner{
     margin-top: 20px;
@@ -955,11 +970,29 @@ footer {
     margin-left: 0;
   }
   .search-icons-inputs{
-    flex-direction: column;
-    align-items: baseline;
+    margin-top: 10px;
   }
   .search-icons-inner{
     flex-direction: column;
     align-items: baseline;
+  } 
+  .footer-section{
+    margin: 0;
+  }
+  .banners-shoes{
+    justify-content: normal;
+  }
+  .image-1{
+    max-width: 242px;
+  }
+  .image-2{
+    max-width: 242px;
+  }
+  .footer-inner{
+    gap: 20px;
+  }
+  .search-login{
+    padding: 6px 25px;
+    white-space: nowrap;
   }
 }
