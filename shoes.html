@@ -54,7 +54,7 @@
         </div>
     </header>
 
-    <section class="marquee">
+    <section class="marquee marque">
         <div class="marquee-inner">
             <h4 class="marquees-textes">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="3"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-north-star">
@@ -823,6 +823,15 @@
         spaceBetween: 20,
         autoplay:{
             delay:2000,
+        },
+        breakpoints: {
+            320: { slidesPerView: 1 },
+            375: { slidesPerView: 1 },
+            425: { slidesPerView: 1 },
+            575: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 2 },
+            1200: { slidesPerView: 2 }
         },
         navigation: {
         nextEl: ".swiper-button-next",
